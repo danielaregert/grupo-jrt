@@ -1,0 +1,152 @@
+.dm-sans-thin {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.dm-sans-extralight {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dm-sans-light {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.dm-sans-regular {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-sans-medium {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dm-sans-semibold {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.dm-sans-bold {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dm-sans-extrabold {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.dm-sans-black {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.dm-sans-extrablack {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+.dm-sans-extrabold-italic {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Efecto roll: el link es una "ventana" de una línea que enmascara la pila doble */
+.roll {
+  display: inline-flex;
+  overflow: hidden;
+  height: 1.4em;
+}
+
+.roll-inner {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4em;
+  transform: translateY(0);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.roll:hover .roll-inner,
+.roll-btn:hover .roll-inner {
+  transform: translateY(-100%);
+}
+
+/* Swiper de logos: cada slide centrado y con alto uniforme */
+.logos-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: #8b8b8b;
+  filter: grayscale(1);
+  transition: color 0.3s, filter 0.3s;
+}
+
+.logos-swiper .swiper-slide img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Testimonios: el viewport del swiper deja ver las cards que asoman a la derecha */
+.testi-swiper.swiper {
+  overflow: visible;
+}
+
+.logos-swiper .swiper-slide:hover {
+  color: #212544;
+  filter: grayscale(0);
+}
+
+
+.dot{
+    background-color: #C54A0D;
+    border-radius: 120px;
+    width: 8px;
+    height: 8px;
+}
+
+.max-w-custom{
+  max-width:1532px;
+}
+
+/* Acordeón FAQ: la clase .open la togglea el onclick inline en index.html */
+.faq-item .answer {
+  max-height: 0;
+}
+
+.faq-item.open .answer {
+  max-height: 320px;
+}
+
+.faq-item .plus-h {
+  transition: transform 0.2s;
+}
+
+.faq-item.open .plus-h {
+  transform: rotate(90deg);
+}

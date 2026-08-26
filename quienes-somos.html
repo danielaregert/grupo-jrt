@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-jrt: #212544;
+      }
+    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <title>Quiénes Somos | Grupo JRT</title>
+</head>
+
+<body class="dm-sans-regular">
+
+  <!-- Nav -->
+  <nav class="text-black dm-sans-regular pt-2 md:pt-4">
+    <div class="lg:px-0 max-w-custom mx-auto flex justify-between items-center px-2">
+      <div class="md:bg-black text-white w-fit p-2 md:p-4 flex gap-15">
+
+        <a href="index.html" class="dm-sans-bold flex items-center"><img class="me-2 hidden" src="/logo.png"
+            alt="Grupo JRT" width="35px">Grupo JRT</a>
+        <ul class="dm-sans-light hidden md:flex items-center gap-4">
+          <li><a href="index.html#inicio" class="roll"><span class="roll-inner"><span>Inicio</span><span
+                  aria-hidden="true">Inicio</span></span></a></li>
+          <li><a href="quienes-somos.html" class="roll"><span class="roll-inner"><span>Quiénes somos</span><span
+                  aria-hidden="true">Quiénes somos</span></span></a></li>
+          <li><a href="index.html#servicios" class="roll"><span class="roll-inner"><span>Nuestros servicios</span><span
+                  aria-hidden="true">Nuestros servicios</span></span></a></li>
+          <li><a href="index.html#faq" class="roll"><span class="roll-inner"><span>FAQ</span><span
+                  aria-hidden="true">FAQ</span></span></a></li>
+        </ul>
+      </div>
+
+      <a href="index.html#contact" class="roll-btn py-2 px-4 text-white bg-[#C54A0D] hidden md:flex"><span class="roll"><span
+            class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
+      <a href="index.html#contact" class="p-4 text-white md:hidden">+</a>
+
+    </div>
+  </nav>
+
+  <!-- Page banner -->
+  <section class="max-w-custom mx-auto pt-16 md:pt-24 px-4 md:px-6">
+    <span
+      class="mx-auto bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+        class="dot ms-1"></span>Sobre Nosotros</span>
+    <h1 class="text-5xl text-center mt-6 dm-sans-medium">¿Quiénes somos?</h1>
+  </section>
+
+  <!-- Nuestra Empresa -->
+  <section class="max-w-custom mx-auto pt-30 px-4 md:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+      <div class="flex flex-col gap-5 lg:sticky lg:top-[20%]">
+        <span
+          class="bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+            class="dot ms-1"></span>Nuestra Empresa</span>
+        <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917]">Ingeniería aplicada a la industria.</h2>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+          En Grupo JRT desarrollamos soluciones integrales para la industria, brindando servicios de ingeniería,
+          fabricación, montaje y mantenimiento industrial para empresas de distintos sectores productivos.
+        </p>
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+          Con más de tres décadas de experiencia, acompañamos a nuestros clientes desde la planificación hasta la
+          ejecución de cada proyecto, aportando soluciones eficientes, seguras y adaptadas a las necesidades de cada
+          operación.
+        </p>
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+          Nuestro compromiso con la calidad, la mejora continua y el cumplimiento de los plazos nos ha permitido
+          construir relaciones de largo plazo con importantes compañías del país.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Máquinas de rotomoldeo / crecimiento -->
+  <section class="bg-[#f5f1eb] mt-30">
+    <div class="max-w-custom mx-auto px-4 md:px-6 py-24">
+      <span
+        class="bg-white text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+          class="dot ms-1"></span>Máquinas de Rotomoldeo</span>
+      <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917] mt-6 max-w-2xl">En qué punto nos encontramos</h2>
+      <p class="leading-[1.64] opacity-80 text-[#1b1917] mt-5 max-w-2xl">
+        Es clave mencionar que estamos en constante crecimiento, expandiéndonos a nuestra nueva planta en Zona Oeste
+        de 480 m².
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16">
+        <figure class="flex flex-col gap-3">
+          <img src="/jrt-trabajando.jpeg" alt="Fabricación de estructura portante de equipos condensadores"
+            class="w-full h-[320px] object-cover rounded-[2px]">
+          <figcaption class="text-sm opacity-80 text-[#1b1917]">Fabricación de Estructura Portante de equipos
+            condensadores.</figcaption>
+        </figure>
+        <figure class="flex flex-col gap-3">
+          <img src="/jrt-trabajando-2.png" alt="Fabricación de estructura portante de equipos condensadores"
+            class="w-full h-[320px] object-cover rounded-[2px]">
+          <figcaption class="text-sm opacity-80 text-[#1b1917]">Fabricación de Estructura Portante de equipos
+            condensadores.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestra propuesta de valor -->
+  <section class="max-w-custom mx-auto py-30 px-4 md:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+      <div class="flex flex-col gap-5 lg:sticky lg:top-[20%]">
+        <span
+          class="bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+            class="dot ms-1"></span>Nuestra Propuesta de Valor</span>
+        <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917]">Continuidad operativa garantizada.</h2>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+          Nuestro enfoque combina experiencia técnica, capacidad operativa y una metodología de trabajo orientada a
+          garantizar la continuidad operativa de nuestros clientes.
+        </p>
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+          Nos especializamos en proyectos que requieren planificación, precisión y altos estándares de ejecución,
+          ofreciendo un servicio integral que abarca desde el desarrollo de ingeniería hasta la puesta en marcha.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Áreas de especialización -->
+  <section class="bg-[#1b1917] py-24">
+    <div class="max-w-custom mx-auto px-4 md:px-6">
+      <div class="flex flex-col items-center gap-4 mb-16">
+        <span
+          class="bg-[#e4e0d9] text-[#1b1917] px-3 py-2 w-fit rounded-[2px] flex items-center gap-2">
+          <span class="dot"></span>
+          <span class="text-sm font-medium">Áreas de especialización</span>
+        </span>
+        <h2 class="text-4xl dm-sans-medium leading-[1.2] text-white text-center">Grupo JRT cuenta con:</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Más de 30 años de experiencia</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Taller propio</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Fabricación en acero al carbono e inoxidable</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Equipamiento industrial</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Personal especializado</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Soluciones llave en mano</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Desarrollo de ingeniería</span>
+        </div>
+        <div class="flex items-center gap-3 py-4 border-b border-[#423e3a]">
+          <i class="ph-bold ph-check-circle text-[#C54A0D] text-2xl shrink-0"></i>
+          <span class="text-white opacity-90">Cobertura para proyectos industriales</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="max-w-custom mx-auto py-24 px-4 md:px-6 flex flex-col items-center text-center gap-6">
+    <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917]">¿Hablamos de tu proyecto?</h2>
+    <p class="leading-[1.64] opacity-80 text-[#1b1917] max-w-xl">
+      Contanos qué necesitás y te ayudamos a encontrar la solución técnica más eficiente para tu operación.
+    </p>
+    <a href="index.html#contact" class="roll-btn inline-block text-white bg-black py-2 px-4"><span
+        class="roll"><span class="roll-inner"><span>Contactanos</span><span
+            aria-hidden="true">Contactanos</span></span></span></a>
+  </section>
+
+</body>
+
+</html>

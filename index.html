@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-jrt: #212544;
+      }
+    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <title>Grupo JRT</title>
+</head>
+
+<body class="dm-sans-regular">
+
+  <div id="hero"
+    class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/jrt-trabajando.jpeg')] bg-cover bg-center min-h-dvh w-dvw flex flex-col px-2">
+    <nav class="text-black dm-sans-regular pt-2 md:pt-4">
+      <div class="lg:px-0 max-w-custom mx-auto flex justify-between items-center">
+        <div class="md:bg-black text-white w-fit p-2 md:p-4 flex gap-15">
+
+          <a href="http://" class="dm-sans-bold flex items-center"><img class="me-2 hidden" src="/logo.png"
+              alt="Grupo JRT" width="35px">Grupo JRT</a>
+          <ul class="dm-sans-light hidden md:flex items-center gap-4">
+            <li><a href="#inicio" class="roll"><span class="roll-inner"><span>Inicio</span><span
+                    aria-hidden="true">Inicio</span></span></a></li>
+            <li><a href="#identidad" class="roll"><span class="roll-inner"><span>Quiénes somos</span><span
+                    aria-hidden="true">Quiénes somos</span></span></a></li>
+            <li><a href="#servicios" class="roll"><span class="roll-inner"><span>Nuestros servicios</span><span
+                    aria-hidden="true">Nuestros servicios</span></span></a></li>
+            <li><a href="#faq" class="roll"><span class="roll-inner"><span>FAQs</span><span
+                    aria-hidden="true">FAQs</span></span></a></li>
+          </ul>
+        </div>
+
+        <a href="/" class="roll-btn py-2 px-4 text-white bg-[#C54A0D] hidden md:flex"><span class="roll"><span
+              class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
+        <a href="/" class="p-4 text-white md:hidden">+</a>
+
+      </div>
+    </nav>
+
+    <div id="heroText" class="max-w-custom mx-auto mt-auto w-full pb-10 px-2"> <span class="hidden dm-sans-light text-white uppercase flex flex-col text-2xl md:text-4xl lg:text-7xl pb-8">Grupo JRT</span>
+      <h1 class="dm-sans-light text-white uppercase flex flex-col text-4xl lg:text-7xl pb-8">Montajes
+        Industriales <span></span> <span class="dm-sans-light-italic">y <span
+            class="dm-sans-extrabold-italic">Soluciones</span> Integrales</span></h1>
+      <hr class="border-white pb-6 me-5">
+      <div class="flex flex-col-reverse md:flex-row  justify-between text-white">
+        <div class="mt-auto">[ <span class="roll"><span class="roll-inner"><span>Grupo JRT</span><span
+                aria-hidden="true">Grupo JRT</span></span></span> ]</div>
+        <div class="md:max-w-[30%]">
+          <p class="text-lg mb-6">Especialistas en herrería de obra, redes de incendio<br> y montajes de alta complejidad.
+            Solidez técnica al servicio de la industria. </p>
+          <a href="/" class="roll-btn inline-block text-white bg-black border-white border-1 py-2 px-4"><span
+              class="roll"><span class="roll-inner"><span>Empezar</span><span
+                  aria-hidden="true">Empezar</span></span></span></a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div>
+    </div>
+  </div>
+
+  <section>
+
+  </section>
+
+
+  <!---Sobre Nosotros-->
+  <section class="max-w-custom mx-auto pt-30 px-4 md:px-6">
+    <span
+      class="mx-auto bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+        class="dot ms-1"></span>Nuestros servicios</span>
+    <h2 class="text-5xl text-center mt-6 dm-sans-medium">Nuestros servicios</h2>
+    <p class="text-lg max-w-4xl mx-auto mt-5 mb-20 text-center">Grupo JRT está formada por profesionales en montaje,
+      mantenimiento y especialistas en soldadura industrial con mas de 30 años de experiencia en el rubro. Brindado a
+      nuestros clientes el servicio y las soluciones pertinentes.</p>
+
+    <div id="services" class="w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 grid grid-cols-1 gap-1 mb-20">
+      <!-- Card 01 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+          <div
+            class="invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+            01.</div>
+          <div class="flex items-center justify-center h-full">
+            <i
+              class="ph-thin ph-factory text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Montajes Industriales</h3>
+            <p class="leading-[1.64] opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Montaje y desmontaje de maquinas en plantas industriales.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 02 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+          <div
+            class="invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+            02.</div>
+          <div class="flex items-center justify-center h-full">
+            <i
+              class="ph-thin ph-fire-extinguisher text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Redes de Incendio</h3>
+            <p class="leading-[1.64] opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Ofrecemos el servicio especializado en el diseño e instalación del sistema de red de incendio.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 03 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+          <div
+            class=" invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+            03.</div>
+          <div class="flex items-center justify-center h-full">
+            <i
+              class="ph-thin ph-pipe text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Instalación de Cañerías</h3>
+            <ul
+              class="columns-2 gap-3 list-disc pl-4 text-sm leading-snug opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white [&>li]:break-inside-avoid">
+              <li>Cañerías de Agua</li>
+              <li>Aire comprimido / Vapor</li>
+              <li>Cañerías de Agua Industrial</li>
+              <li>Piping de agua, aire comprimido, vapor</li>
+              <li>Cañerías de Alta Presión</li>
+              <li>Hidráulicos</li>
+              <li>Acero Inoxidable, para cualquier efluente</li>
+              <li>Red de Incendios (Instalación de Bombas)</li>
+              <li>Termofusión, Líquidos Industriales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Card 04 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+          <div
+            class="invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+            04.</div>
+          <div class="flex items-center justify-center h-full">
+            <i
+              class="ph-thin ph-wrench text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Especialistas en Soldadura</h3>
+            <p class="leading-[1.64] opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Para todo tipo de materiales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="bg-[#f5f1eb]">
+    <div class="max-w-custom mx-auto px-4 md:px-6 py-24">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-[60px] lg:mb-[100px]">
+        <div class="flex flex-col items-start gap-5">
+          <span
+            class="hidden bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+              class="dot ms-1"></span>Testimonios</span>
+          <h2 class="text-[40px] md:text-5xl lg:text-6xl dm-sans-medium leading-[1.22]">Lo que dicen nuestros clientes
+          </h2>
+        </div>
+        <div class="flex gap-2">
+          <button
+            class="testi-prev w-8 h-8 bg-[#C54A0D] rounded-[2px] flex items-center justify-center text-white cursor-pointer"><i
+              class="ph ph-caret-left"></i></button>
+          <button
+            class="testi-next w-8 h-8 bg-[#C54A0D] rounded-[2px] flex items-center justify-center text-white cursor-pointer"><i
+              class="ph ph-caret-right"></i></button>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="swiper testi-swiper">
+          <div class="swiper-wrapper">
+            <!-- ⚠️ PLACEHOLDER: reemplazar textos y nombres por testimonios REALES de clientes -->
+            <div class="swiper-slide w-full sm:w-[360px] lg:w-[410px] h-[368px]">
+              <div class="bg-white rounded-[2px] p-5 h-full flex flex-col justify-between items-start">
+                <img src="/logos/acindar.png" alt="Acindar" class="h-7 w-auto object-contain">
+                <p class="leading-[1.64] opacity-80 text-[#1b1917]">El montaje se ejecutó en tiempo y forma, con una
+                  coordinación impecable dentro de nuestra planta.</p>
+                <div class="flex flex-col gap-1">
+                  <div class="dm-sans-medium text-[#1b1917]">Nombre Apellido</div>
+                  <div class="text-sm opacity-80 text-[#1b1917]">Cargo, Empresa</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full sm:w-[360px] lg:w-[410px] h-[368px]">
+              <div class="bg-white rounded-[2px] p-5 h-full flex flex-col justify-between items-start">
+                <img src="/logos/arcelor.png" alt="Grupo Arcelor Mittal" class="h-7 w-auto object-contain">
+                <p class="leading-[1.64] opacity-80 text-[#1b1917]">La instalación de la red de incendio se hizo con
+                  total profesionalismo y cumpliendo todas las normas vigentes.</p>
+                <div class="flex flex-col gap-1">
+                  <div class="dm-sans-medium text-[#1b1917]">Nombre Apellido</div>
+                  <div class="text-sm opacity-80 text-[#1b1917]">Cargo, Empresa</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full sm:w-[360px] lg:w-[410px] h-[368px]">
+              <div class="bg-white rounded-[2px] p-5 h-full flex flex-col justify-between items-start">
+                <img src="/logos/sunchemical.png" alt="Sun Chemical INK" class="h-7 w-auto object-contain">
+                <p class="leading-[1.64] opacity-80 text-[#1b1917]">Trabajo prolijo y seguro en las cañerías de alta
+                  presión. Cumplieron cada etapa del proyecto.</p>
+                <div class="flex flex-col gap-1">
+                  <div class="dm-sans-medium text-[#1b1917]">Nombre Apellido</div>
+                  <div class="text-sm opacity-80 text-[#1b1917]">Cargo, Empresa</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full sm:w-[360px] lg:w-[410px] h-[368px]">
+              <div class="bg-white rounded-[2px] p-5 h-full flex flex-col justify-between items-start">
+                <img src="/logos/metalsa.png" alt="Metalsa Argentina SA" class="h-7 w-auto object-contain">
+                <p class="leading-[1.64] opacity-80 text-[#1b1917]">Sus soldadores resolvieron uniones complejas en
+                  acero inoxidable sin detener nuestra producción.</p>
+                <div class="flex flex-col gap-1">
+                  <div class="dm-sans-medium text-[#1b1917]">Nombre Apellido</div>
+                  <div class="text-sm opacity-80 text-[#1b1917]">Cargo, Empresa</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full sm:w-[360px] lg:w-[410px] h-[368px]">
+              <div class="bg-white rounded-[2px] p-5 h-full flex flex-col justify-between items-start">
+                <img src="/logos/ferrum.jpg" alt="Ferrum SA" class="h-7 w-auto object-contain">
+                <p class="leading-[1.64] opacity-80 text-[#1b1917]">Respuesta rápida y solidez técnica en cada
+                  intervención de mantenimiento industrial.</p>
+                <div class="flex flex-col gap-1">
+                  <div class="dm-sans-medium text-[#1b1917]">Nombre Apellido</div>
+                  <div class="text-sm opacity-80 text-[#1b1917]">Cargo, Empresa</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full sm:w-[360px] lg:w-[410px] h-[368px]">
+              <div class="bg-white rounded-[2px] p-5 h-full flex flex-col justify-between items-start">
+                <img src="/logos/tropical.jpg" alt="Tropical Argentina" class="h-7 w-auto object-contain">
+                <p class="leading-[1.64] opacity-80 text-[#1b1917]">Desmontaron y reinstalaron la línea completa
+                  respetando los plazos comprometidos.</p>
+                <div class="flex flex-col gap-1">
+                  <div class="dm-sans-medium text-[#1b1917]">Nombre Apellido</div>
+                  <div class="text-sm opacity-80 text-[#1b1917]">Cargo, Empresa</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden md:block absolute right-0 top-0 h-full w-[30%] bg-[linear-gradient(90deg,transparent,#f5f1eb)] pointer-events-none z-10">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="secondSection" class="max-w-custom mx-auto py-40 px-4 md:px-6">
+
+
+
+    <h3 class="dm-sans-medium text-jrt mb-10 text-center text-2xl">Algunas de las empresas que nos eligen</h3>
+    <div class="swiper logos-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/logos/acindar.png" alt="Acindar"></div>
+        <div class="swiper-slide"><img src="/logos/arcelor.png" alt="Grupo Arcelor Mittal"></div>
+        <div class="swiper-slide"><img src="/logos/sunchemical.png" alt="Sun Chemical INK"></div>
+        <div class="swiper-slide">Obras y Sistemas</div>
+        <div class="swiper-slide">Mirabilia</div>
+        <div class="swiper-slide"><img src="/logos/spicer.jpg" alt="Spicer Ejes Pesados SRL"></div>
+        <div class="swiper-slide"><img src="/logos/metalsa.png" alt="Metalsa Argentina SA"></div>
+        <div class="swiper-slide"><img src="/logos/tropical.jpg" alt="Tropical Argentina"></div>
+        <div class="swiper-slide"><img src="/logos/ferrum.jpg" alt="Ferrum SA"></div>
+        <div class="swiper-slide"><img src="/logos/el-club-de-la-milanesa.png" alt="El Club de la Milanesa"></div>
+        <div class="swiper-slide"><img src="/logos/biogenesis.png" alt="Biogenesis"></div>
+        <div class="swiper-slide"><img src="/logos/grupomitre.jpg" alt="Grupo Mitre"></div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section id="contact"
+    class="py-24 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/jrt-trabajando-3.jpeg')] bg-cover bg-center">
+  <div class="max-w-custom mx-auto px-4 md:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Header -->
+      <div class="flex flex-col gap-5 lg:sticky lg:top-[20%]">
+        <h1 class="text-center md:text-start text-[38px] md:text-[48px] leading-[1.2] font-medium text-white">
+          HABLEMOS<br>DE TU PROYECTO
+        </h1>
+        <div class="text-center md:text-start flex flex-col gap-1 w-full md:w-[90%]">
+          <p class="opacity-100 font-medium text-white">¿Necesitás asesoramiento? Contanos.</p>
+          <p class="opacity-80 leading-[1.64] text-white">
+            Completá el formulario para iniciar la conversación, ya sea para una obra, soporte técnico o simplemente para consultar.
+          </p>
+        </div>
+      </div>
+
+      <!-- Form Card -->
+      <div class="flex justify-center items-center">
+        <div class="w-full max-w-[480px] p-8 rounded-[4px] bg-white shadow-[0_0_8px_1px_#0003] flex flex-col gap-8">
+          <form class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5">
+
+              <div class="flex flex-col gap-1">
+                <label for="name" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Nombre</label>
+                <input type="text" id="name" name="name" required="" placeholder="Juan Pérez" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#C54A0D] transition-colors">
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <label for="email" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Correo electrónico</label>
+                <input type="email" id="email" name="email" required="" placeholder="juan@empresa.com" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#C54A0D] transition-colors">
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <label for="subject" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Asunto</label>
+                <input type="text" id="subject" name="subject" required="" placeholder="¿Qué necesitás?" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#C54A0D] transition-colors">
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <label for="message" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Mensaje</label>
+                <textarea id="message" name="message" required="" placeholder="Hola, quería consultar..." maxlength="5000" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 min-h-[140px] resize-none focus:outline-none focus:border-[#C54A0D] transition-colors"></textarea>
+              </div>
+
+            </div>
+
+            <div class="w-full">
+              <input type="submit" value="Enviar mensaje" class="w-full py-3 px-4 rounded-[2px] bg-[#C54A0D] text-white text-sm leading-[1.68] transition-colors duration-300 hover:bg-[#423e3a] cursor-pointer">
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="bg-[#1b1917] py-24">
+  <div class="max-w-custom mx-auto px-6">
+    <div class="flex flex-col lg:flex-row justify-between gap-12">
+
+      <!-- Header row -->
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
+          <span class="bg-[#e4e0d9] text-[#1b1917] px-3 py-2 w-fit rounded-[2px] flex items-center gap-2">
+            <span class="dot"></span>
+            <span class="text-sm font-medium">FAQs</span>
+          </span>
+          <h2 class="text-[32px] md:text-[40px] leading-[1.22] font-medium text-white w-full md:w-3/4 lg:text-[60px]">
+            Preguntas frecuentes
+          </h2>
+        </div>
+
+        <div class="flex flex-col pt-4 border-t border-[#423e3a] md:pt-0 md:border-t-0">
+          <p class="text-white font-medium">¿Tenés otra consulta? Escribinos</p>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-3">
+              <span class="text-[#e4e0d9]">✉</span>
+              <span class="opacity-80 text-white">contacto@grupojrt.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[#e4e0d9]">☎</span>
+              <span class="opacity-80 text-white">+54 11 0000 0000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Questions -->
+      <div class="flex flex-col gap-6 w-full lg:w-[50%]">
+
+        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+          <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
+            <p class="text-[20px] text-white font-medium w-[85%]">¿Qué tipos de montajes industriales realizan?</p>
+            <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
+              <span class="absolute bg-white w-[2px] h-[14px]"></span>
+              <span class="absolute bg-white w-[14px] h-[2px] plus-h"></span>
+            </span>
+          </div>
+          <div class="answer max-h-0 transition-all duration-300">
+            <p class="text-white/80 font-light pt-2 w-full">
+              Ejecutamos montajes de estructuras metálicas pesadas y livianas, instalación de maquinaria y líneas de producción. Contamos con un equipo especializado en soluciones a medida para plantas industriales, depósitos y grandes superficies, garantizando precisión técnica en cada etapa.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+          <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
+            <p class="text-[20px] text-white font-medium w-[85%]">¿Se encargan de la instalación de redes de incendio?</p>
+            <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
+              <span class="absolute bg-white w-[2px] h-[14px]"></span>
+              <span class="absolute bg-white w-[14px] h-[2px] plus-h"></span>
+            </span>
+          </div>
+          <div class="answer max-h-0 transition-all duration-300">
+            <p class="text-white/80 font-light pt-2 w-full">
+              Sí. Realizamos la instalación integral de sistemas contra incendio (hidrantes y rociadores) bajo normativa vigente. Esto incluye el tendido de cañerías, la herrería de soporte necesaria y la conexión de equipos, asegurando la protección adecuada de la infraestructura.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+          <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
+            <p class="text-[20px] text-white font-medium w-[85%]">¿Qué alcance tiene el servicio de herrería de obra?</p>
+            <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
+              <span class="absolute bg-white w-[2px] h-[14px]"></span>
+              <span class="absolute bg-white w-[14px] h-[2px] plus-h"></span>
+            </span>
+          </div>
+          <div class="answer max-h-0 transition-all duration-300">
+            <p class="text-white/80 font-light pt-2 w-full">
+              Cubrimos desde herrería técnica hasta estructural: portones industriales, escaleras de emergencia, barandas, cerramientos y estructuras de soporte. Trabajamos con soldadura calificada para garantizar la máxima resistencia y durabilidad.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+          <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
+            <p class="text-[20px] text-white font-medium w-[85%]">¿Cuentan con taller propio para prefabricación?</p>
+            <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
+              <span class="absolute bg-white w-[2px] h-[14px]"></span>
+              <span class="absolute bg-white w-[14px] h-[2px] plus-h"></span>
+            </span>
+          </div>
+          <div class="answer max-h-0 transition-all duration-300">
+            <p class="text-white/80 font-light pt-2 w-full">
+              Contamos con infraestructura propia para la fabricación de componentes antes del montaje en obra. Actualmente operamos en nuestra base de San Miguel y, a partir de abril de 2026, ampliaremos nuestra capacidad en una nueva nave industrial de 480 m² en Zona Oeste del Gran Buenos Aires, lo que nos permitirá optimizar tiempos en proyectos de gran escala.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+          <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
+            <p class="text-[20px] text-white font-medium w-[85%]">¿Cumplen con las normativas de seguridad para el ingreso a plantas?</p>
+            <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
+              <span class="absolute bg-white w-[2px] h-[14px]"></span>
+              <span class="absolute bg-white w-[14px] h-[2px] plus-h"></span>
+            </span>
+          </div>
+          <div class="answer max-h-0 transition-all duration-300">
+            <p class="text-white/80 font-light pt-2 w-full">
+              La seguridad es nuestra prioridad. Todo nuestro personal cuenta con los elementos de protección personal (EPP) obligatorios y las coberturas de ART correspondientes. Cumplimos estrictamente con los protocolos de Seguridad e Higiene exigidos para el trabajo en entornos industriales y obras civiles.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+          <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
+            <p class="text-[20px] text-white font-medium w-[85%]">¿Cómo es el proceso para solicitar una cotización?</p>
+            <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
+              <span class="absolute bg-white w-[2px] h-[14px]"></span>
+              <span class="absolute bg-white w-[14px] h-[2px] plus-h"></span>
+            </span>
+          </div>
+          <div class="answer max-h-0 transition-all duration-300">
+            <p class="text-white/80 font-light pt-2 w-full">
+              Podés contactarnos vía WhatsApp o email enviando planos o el detalle del requerimiento. Realizamos visitas técnicas para relevamiento en obra, lo que nos permite entregar presupuestos precisos y ajustados a la complejidad operativa de cada proyecto.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.logos-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 },
+      },
+    });
+
+    new Swiper('.testi-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      loop: true,
+      speed: 500,
+      allowTouchMove: false,
+      navigation: {
+        nextEl: '.testi-next',
+        prevEl: '.testi-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
