@@ -112,11 +112,8 @@
   object-fit: contain;
 }
 
-/* Testimonios: el viewport del swiper deja ver las cards que asoman a la derecha */
-.testi-swiper.swiper {
-  overflow: visible;
-}
-
+/* Testimonios: el contenedor clipea las cards (default de Swiper, overflow: hidden).
+   NO volver a poner overflow: visible acá — hace que la página scrollee horizontal. */
 .logos-swiper .swiper-slide:hover {
   color: #212544;
   filter: grayscale(0);
@@ -124,14 +121,14 @@
 
 
 .dot{
-    background-color: #C54A0D;
-    border-radius: 120px;
-    width: 8px;
-    height: 8px;
+    background-color: #0d308a;
+    border-radius: 100%;
+    width: 9px;
+    height: 9px;
 }
 
 .max-w-custom{
-  max-width:1532px;
+  max-width:1440px;
 }
 
 /* Acordeón FAQ: la clase .open la togglea el onclick inline en index.html */
@@ -149,4 +146,163 @@
 
 .faq-item.open .plus-h {
   transform: rotate(90deg);
+}
+
+/* Menú mobile: overlay fullscreen que togglea .open via JS (toggleMobileMenu en index.html) */
+#mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: #1b1917;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  padding: 80px 24px 40px;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 280ms ease-out, transform 280ms ease-out;
+}
+
+#mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#mobile-menu a:hover {
+  color: #2596be;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+.nav-burger .icon-open {
+  display: block;
+}
+
+.nav-burger .icon-close {
+  display: none;
+}
+
+.nav-burger[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.nav-burger[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
+/* Glass card: efecto vidrio esmerilado (usada en el form de #contact) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+/* Fondo diagonal de #faq + footer: el 2do color del gradiente deriva sutilmente entre gris, celeste y azul */
+@property --grad-c2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgb(0 0 0 / 90%);
+}
+
+.bg-custom {
+  background-image: linear-gradient(135deg, #000, var(--grad-c2));
+  animation: bg-custom-shift 5s ease-in-out infinite alternate;
+}
+
+@keyframes bg-custom-shift {
+  0% {
+    --grad-c2: rgb(0 0 0 / 90%);
+  }
+
+  100% {
+    --grad-c2: #000a22;
+  }
+}
+
+/* Navbar: entra deslizándose desde arriba con fade al cargar la página.
+   fill-mode "backwards": durante el delay toma el estado inicial y al terminar
+   vuelve a sus estilos naturales (no queda transform residual aplicado). */
+@keyframes nav-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-enter {
+  animation: nav-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s backwards;
+}
+
+/* HR del hero: la línea se dibuja de izquierda a derecha al cargar.
+   scaleX en vez de width para animar por GPU (no dispara layout). */
+@keyframes hr-draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hr-draw {
+  transform-origin: left center;
+  animation: hr-draw 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-enter,
+  .hr-draw {
+    animation: none;
+  }
+}
+
+.testi-swiper .swiper-slide {
+ height:345px;
 }

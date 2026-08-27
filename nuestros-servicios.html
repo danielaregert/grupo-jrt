@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-jrt: #212544;
+      }
+    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <title>Nuestros Servicios | Grupo JRT</title>
+</head>
+
+<body class="dm-sans-regular" id="top">
+<div class="px-2">
+
+  <!-- Nav -->
+  <nav class="nav-enter relative z-50 text-black dm-sans-regular pt-2 md:pt-4">
+      <div class="lg:px-0 max-w-custom mx-auto flex justify-between items-start">
+        <div class="md:bg-black text-white w-fit p-2 md:p-4 md:py-3 flex gap-15">
+
+          <a href="index.html" class="dm-sans-bold flex items-center"><img class="me-2" src="/logo-blanco.png"
+              alt="Grupo JRT" width="35px">Grupo JRT</a>
+          <ul class="dm-sans-light hidden md:flex items-center gap-4">
+            <li><a href="index.html" class="roll"><span class="roll-inner"><span>Inicio</span><span
+                    aria-hidden="true">Inicio</span></span></a></li>
+            <li class="group relative">
+              <a href="quienes-somos.html" class="roll"><span class="roll-inner"><span>Quiénes somos</span><span
+                    aria-hidden="true">Quiénes somos</span></span></a>
+              <ul
+                class="absolute left-[-15px] top-[161%] min-w-max bg-black text-white opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                <li><a href="quienes-somos.html" class="roll-btn block px-4 py-2 hover:bg-black transition-colors"><span
+                      class="roll"><span class="roll-inner"><span>Sobre Nosotros</span><span
+                          aria-hidden="true">Sobre Nosotros</span></span></span></a></li>
+                <li><a href="#" class="roll-btn block px-4 py-2 hover:bg-black transition-colors"><span class="roll"><span
+                        class="roll-inner"><span>Nuestros Clientes</span><span aria-hidden="true">Nuestros
+                          Clientes</span></span></span></a></li>
+              </ul>
+            </li>
+            <li><a href="#servicios" class="roll"><span class="roll-inner"><span>Nuestros servicios</span><span
+                    aria-hidden="true">Nuestros servicios</span></span></a></li>
+            <li><a href="index.html#faq" class="roll"><span class="roll-inner"><span>FAQs</span><span
+                    aria-hidden="true">FAQs</span></span></a></li>
+          </ul>
+        </div>
+
+        <a href="index.html#contact" class="roll-btn py-3 px-4 text-white bg-[#2596be] hidden md:flex"><span class="roll"><span
+              class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
+        <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"
+          onclick="toggleMobileMenu(this)" class="nav-burger md:hidden text-white p-4">
+          <svg class="icon-open w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="icon-close w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden">
+      <a href="index.html" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>Inicio</span><span
+            aria-hidden="true">Inicio</span></span></a>
+      <a href="quienes-somos.html" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>Quiénes
+            somos</span><span aria-hidden="true">Quiénes somos</span></span></a>
+      <a href="#servicios" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>Nuestros
+            servicios</span><span aria-hidden="true">Nuestros servicios</span></span></a>
+      <a href="index.html#faq" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>FAQs</span><span
+            aria-hidden="true">FAQs</span></span></a>
+      <a href="index.html#contact" class="roll-btn dm-sans-medium text-lg text-white bg-[#2596be] py-2 px-6"><span class="roll"><span
+            class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
+    </div>
+</div>
+
+  <!-- Page banner -->
+  <section class="max-w-custom mx-auto pt-16 md:pt-24 px-4 md:px-6">
+    <span
+      class="mx-auto bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+        class="dot ms-1"></span>Capacidad Operativa</span>
+    <h1 class="text-5xl text-center mt-6 dm-sans-medium">Nuestros Servicios</h1>
+    <p class="text-lg max-w-3xl mx-auto mt-5 text-center opacity-80 text-[#1b1917]">
+      Montajes industriales, herrería de obra y redes de incendio, con más de tres décadas de experiencia real en el
+      rubro y taller propio para fabricación.
+    </p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="max-w-custom mx-auto pt-24 px-4 md:px-6">
+    <div id="services" class="w-full grid grid-cols-1 md:grid-cols-3 gap-1">
+      <!-- Card 01 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-full p-5 border border-[#0d308a] rounded-[2px] flex flex-col gap-6">
+          <div class="flex items-center justify-center h-[140px]">
+            <i
+              class="ph-thin ph-factory text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Montajes Industriales</h3>
+            <ul
+              class="list-disc pl-4 leading-[1.64] opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              <li>Instalación de estructuras metálicas pesadas y livianas.</li>
+              <li>Movimiento de maquinaria y armado de líneas de producción.</li>
+              <li>Mantenimiento preventivo y correctivo de plantas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Card 02 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-full p-5 border border-[#0d308a] rounded-[2px] flex flex-col gap-6">
+          <div class="flex items-center justify-center h-[140px]">
+            <i
+              class="ph-thin ph-hammer text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Herrería de Obra y Artística</h3>
+            <ul
+              class="list-disc pl-4 leading-[1.64] opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              <li>Fabricación e instalación de portones industriales, barandas y escaleras de emergencia.</li>
+              <li>Estructuras de soporte y cerramientos metálicos a medida.</li>
+              <li>Soldadura calificada y acabados de alta resistencia.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Card 03 -->
+      <div class="group relative overflow-hidden rounded-[2px]">
+        <div
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+        </div>
+        <div class="relative h-full p-5 border border-[#0d308a] rounded-[2px] flex flex-col gap-6">
+          <div class="flex items-center justify-center h-[140px]">
+            <i
+              class="ph-thin ph-fire-extinguisher text-[100px] text-[#423e3a] opacity-50 transition-all duration-500 group-hover:text-white group-hover:opacity-100"></i>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3
+              class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              Redes de Incendio</h3>
+            <ul
+              class="list-disc pl-4 leading-[1.64] opacity-80 text-[#1b1917] transition-colors duration-500 group-hover:text-white">
+              <li>Instalación de sistemas de hidrantes y rociadores según normativa vigente.</li>
+              <li>Tendido de cañerías aéreas y subterráneas.</li>
+              <li>Mantenimiento de salas de bombas y equipos de presión.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="flex justify-center mt-16">
+      <a href="GRUPO-JRT-PRESENTACIÓN.pdf" target="_blank" class="roll-btn inline-block text-white bg-black py-2 px-4"><span
+          class="roll"><span class="roll-inner"><span>Descargá nuestra carta de presentación</span><span
+              aria-hidden="true">Descargá nuestra carta de presentación</span></span></span></a>
+    </div>
+  </section>
+
+  <!-- Áreas de especialización -->
+  <section class="bg-[#1b1917] py-24 mt-30">
+    <div class="max-w-custom mx-auto px-4 md:px-6">
+      <div class="flex flex-col items-center gap-4 mb-16">
+        <span
+          class="bg-[#e4e0d9] text-[#1b1917] px-3 py-2 w-fit rounded-[2px] flex items-center gap-2">
+          <span class="dot"></span>
+          <span class="text-sm font-medium">Áreas de Especialización</span>
+        </span>
+        <h2 class="text-4xl dm-sans-medium leading-[1.2] text-white text-center">Grupo JRT cuenta con:</h2>
+      </div>
+
+      <div class="flex flex-col max-w-4xl mx-auto">
+        <div class="flex items-start gap-3 py-5 border-b border-[#423e3a]">
+          <span class="dot bg-[#0043ff] shrink-0 mt-2"></span>
+          <p class="text-white opacity-90 leading-[1.64]"><span class="dm-sans-semibold">Ingeniería:</span> Desarrollo
+            de proyectos industriales, modificaciones de instalaciones existentes y soluciones adaptadas a procesos
+            productivos.</p>
+        </div>
+        <div class="flex items-start gap-3 py-5 border-b border-[#423e3a]">
+          <span class="dot bg-[#0043ff] shrink-0 mt-2"></span>
+          <p class="text-white opacity-90 leading-[1.64]"><span class="dm-sans-semibold">Fabricación:</span>
+            Estructuras metálicas, equipos especiales, tanques, plataformas, soportes industriales y fabricación en
+            acero al carbono e inoxidable.</p>
+        </div>
+        <div class="flex items-start gap-3 py-5 border-b border-[#423e3a]">
+          <span class="dot bg-[#0043ff] shrink-0 mt-2"></span>
+          <p class="text-white opacity-90 leading-[1.64]"><span class="dm-sans-semibold">Montaje:</span> Montaje y
+            desmontaje de equipos industriales, líneas de producción, estructuras metálicas y sistemas auxiliares.</p>
+        </div>
+        <div class="flex items-start gap-3 py-5 border-b border-[#423e3a]">
+          <span class="dot bg-[#0043ff] shrink-0 mt-2"></span>
+          <p class="text-white opacity-90 leading-[1.64]"><span class="dm-sans-semibold">Mantenimiento:</span>
+            Mantenimiento preventivo, correctivo y paradas de planta para asegurar la continuidad operativa.</p>
+        </div>
+        <div class="flex items-start gap-3 py-5">
+          <span class="dot bg-[#0043ff] shrink-0 mt-2"></span>
+          <p class="text-white opacity-90 leading-[1.64]"><span class="dm-sans-semibold">Redes Industriales:</span>
+            Piping industrial, redes contra incendio, aire comprimido, vapor, agua industrial y cañerías de proceso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos en curso / casos de éxito -->
+  <section class="bg-[#f5f1eb]">
+    <div class="max-w-custom mx-auto px-4 md:px-6 py-24">
+      <span
+        class="bg-white text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+          class="dot ms-1"></span>Proyectos en Curso</span>
+      <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917] mt-6 max-w-2xl">Casos de éxito</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16">
+        <div class="bg-white p-6 rounded-[2px] flex flex-col gap-3">
+          <h3 class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917]">Proyecto Zona Norte</h3>
+          <p class="leading-[1.64] opacity-80 text-[#1b1917]">Ejecución integral de montaje y herrería de alta
+            precisión.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[2px] flex flex-col gap-3">
+          <h3 class="text-2xl dm-sans-medium tracking-[-0.8px] text-[#1b1917]">Próxima Expansión</h3>
+          <p class="leading-[1.64] opacity-80 text-[#1b1917]">Mudanza estratégica a nuestro nuevo centro operativo en
+            Zona Oeste (abril de 2026), ampliando nuestra capacidad a 480 m² de taller propio para optimizar tiempos
+            de fabricación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compromiso y Seguridad -->
+  <section class="max-w-custom mx-auto py-30 px-4 md:px-6">
+    <div class="flex flex-col items-center gap-4 mb-16">
+      <span
+        class="bg-[#e5f7f9] text-[#1b1917] px-3 py-2 w-fit rounded-[2px] flex items-center gap-2">
+        <span class="dot bg-[#0d308a]"></span>
+        <span class="text-sm font-medium">Compromiso y Seguridad</span>
+      </span>
+      <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917] text-center">En qué nos apoyamos</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="flex flex-col gap-3 p-6 border border-[#423e3a] rounded-[2px]">
+        <i class="ph-thin ph-shield-check text-[48px] text-[#0d308a]"></i>
+        <h3 class="text-xl dm-sans-medium text-[#1b1917]">Seguridad e Higiene</h3>
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">Prioridad absoluta en el uso de EPP y cumplimiento de
+          ART.</p>
+      </div>
+      <div class="flex flex-col gap-3 p-6 border border-[#423e3a] rounded-[2px]">
+        <i class="ph-thin ph-medal text-[48px] text-[#0d308a]"></i>
+        <h3 class="text-xl dm-sans-medium text-[#1b1917]">Experiencia</h3>
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">Dirección operativa con más de tres décadas de
+          trayectoria real en el rubro.</p>
+      </div>
+      <div class="flex flex-col gap-3 p-6 border border-[#423e3a] rounded-[2px]">
+        <i class="ph-thin ph-certificate text-[48px] text-[#0d308a]"></i>
+        <h3 class="text-xl dm-sans-medium text-[#1b1917]">Calidad</h3>
+        <p class="leading-[1.64] opacity-80 text-[#1b1917]">Materiales normalizados y mano de obra especializada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Algunas de las empresas que nos eligen -->
+  <section class="max-w-custom mx-auto py-16 px-4 md:px-6">
+    <h3 class="dm-sans-medium text-black mb-10 text-center text-2xl">Algunas de las empresas que nos eligen</h3>
+    <div class="relative">
+      <div class="swiper logos-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/logos/acindar.png" alt="Acindar"></div>
+          <div class="swiper-slide"><img src="/logos/arcelor.png" alt="Grupo Arcelor Mittal"></div>
+          <div class="swiper-slide"><img src="/logos/sunchemical.png" alt="Sun Chemical INK"></div>
+          <div class="swiper-slide text-center">Obras y Sistemas</div>
+          <div class="swiper-slide text-center">Mirabilia</div>
+          <div class="swiper-slide"><img src="/logos/spicer.jpg" alt="Spicer Ejes Pesados SRL"></div>
+          <div class="swiper-slide"><img src="/logos/metalsa.png" alt="Metalsa Argentina SA"></div>
+          <div class="swiper-slide"><img src="/logos/tropical.jpg" alt="Tropical Argentina"></div>
+          <div class="swiper-slide"><img src="/logos/ferrum.jpg" alt="Ferrum SA"></div>
+          <div class="swiper-slide"><img src="/logos/el-club-de-la-milanesa.png" alt="El Club de la Milanesa"></div>
+          <div class="swiper-slide"><img src="/logos/biogenesis.png" alt="Biogenesis"></div>
+          <div class="swiper-slide"><img src="/logos/grupomitre.jpg" alt="Grupo Mitre"></div>
+        </div>
+      </div>
+      <div
+        class="absolute left-0 top-0 h-full w-[15%] bg-[linear-gradient(90deg,white,transparent)] pointer-events-none z-10">
+      </div>
+      <div
+        class="absolute right-0 top-0 h-full w-[15%] bg-[linear-gradient(90deg,transparent,white)] pointer-events-none z-10">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="max-w-custom mx-auto py-24 px-4 md:px-6 flex flex-col items-center text-center gap-6">
+    <h2 class="text-4xl dm-sans-medium leading-[1.2] text-[#1b1917]">¿Cómo pedimos una cotización?</h2>
+    <p class="leading-[1.64] opacity-80 text-[#1b1917] max-w-xl">
+      Escribinos por WhatsApp o email enviando planos o el detalle del requerimiento. Realizamos visitas técnicas
+      para relevamiento en obra y entregamos presupuestos precisos y ajustados a la complejidad de cada proyecto.
+    </p>
+    <a href="index.html#contact" class="roll-btn inline-block text-white bg-black py-2 px-4"><span
+        class="roll"><span class="roll-inner"><span>Contactanos</span><span
+            aria-hidden="true">Contactanos</span></span></span></a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-white bg-black">
+    <div class="max-w-custom mx-auto w-full px-4 md:px-6 py-[138px]">
+      <div class="flex flex-col gap-12">
+
+        <!-- Fila superior -->
+        <div
+          class="flex flex-col gap-10 min-[480px]:gap-8 min-[992px]:flex-row min-[992px]:items-stretch min-[992px]:justify-between">
+          <div
+            class="flex w-full flex-col gap-8 min-[480px]:flex-row min-[480px]:items-start min-[480px]:justify-between min-[992px]:w-[20%] min-[992px]:flex-col min-[992px]:justify-start">
+            <a href="index.html" class="block w-[84px] shrink-0"><img src="/logo-blanco.png" alt="Grupo JRT"
+                class="h-auto w-full"></a>
+            <div class="flex flex-col items-start gap-4 min-[480px]:w-[38%] min-[992px]:w-full">
+              <h3 class="text-2xl leading-[1.5] dm-sans-medium tracking-[-0.8px] text-white">Ingeniería aplicada a la
+                industria.</h3>
+              <a href="index.html#contact"
+                class="roll-btn inline-block w-fit rounded-[2px] bg-[#e4e0d9] px-4 py-2 text-sm dm-sans-medium text-[#1b1917]"><span
+                  class="roll"><span class="roll-inner"><span>Hablemos de tu proyecto</span><span
+                      aria-hidden="true">Hablemos de tu proyecto</span></span></span></a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 min-[992px]:justify-between">
+            <div class="order-last flex md:justify-center min-[992px]:order-none min-[992px]:justify-end">
+              <span class="text-sm text-[#e4e0d9]">2026 © Grupo JRT. Todos los derechos reservados.</span>
+            </div>
+            <div class="flex flex-col items-start gap-2 min-[992px]:flex-row min-[992px]:gap-6">
+              <a href="https://www.instagram.com/grupo.jrt/" target="_blank"
+                class="group flex items-center gap-1 text-sm dm-sans-medium text-white">
+                <span>Instagram</span>
+                <span class="relative block h-4 w-4 overflow-hidden">
+                  <i
+                    class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                  <i aria-hidden="true"
+                    class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                </span>
+              </a>
+              <a href="https://wa.me/5491126633880" target="_blank"
+                class="group flex items-center gap-1 text-sm dm-sans-medium text-white">
+                <span>WhatsApp</span>
+                <span class="relative block h-4 w-4 overflow-hidden">
+                  <i
+                    class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                  <i aria-hidden="true"
+                    class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila inferior -->
+        <div class="flex flex-col gap-8 border-t border-[#423e3a] pt-6 min-[992px]:flex-row min-[992px]:justify-between">
+          <div class="order-last flex items-end justify-center min-[768px]:justify-start min-[992px]:order-none">
+            <a href="#top" class="group flex items-center gap-2 text-sm dm-sans-medium text-white">
+              <span class="relative block h-4 w-4 overflow-hidden">
+                <i
+                  class="ph ph-arrow-up absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                <i aria-hidden="true"
+                  class="ph ph-arrow-up absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+              </span>
+              Volver arriba</a>
+          </div>
+          <nav
+            class="flex flex-col gap-6 min-[480px]:flex-row min-[480px]:justify-between min-[768px]:gap-12 min-[992px]:gap-[100px]">
+            <div class="flex flex-col gap-2 min-[480px]:gap-3 min-[992px]:gap-4">
+              <span class="dm-sans-semibold text-white">Secciones</span>
+              <div class="flex flex-col gap-1">
+                <a href="#servicios" class="roll text-sm dm-sans-light text-white/90"><span class="roll-inner"><span>Nuestros
+                        servicios</span><span aria-hidden="true">Nuestros servicios</span></span></a>
+                <a href="index.html#testimonios" class="roll text-sm dm-sans-light text-white/90"><span
+                    class="roll-inner"><span>Testimonios</span><span aria-hidden="true">Testimonios</span></span></a>
+                <a href="index.html#faq" class="roll text-sm dm-sans-light text-white/90"><span class="roll-inner"><span>FAQs</span><span
+                      aria-hidden="true">FAQs</span></span></a>
+                <a href="index.html#contact" class="roll text-sm dm-sans-light text-white/90"><span
+                    class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></a>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 min-[480px]:gap-3 min-[992px]:gap-4">
+              <span class="dm-sans-semibold text-white">Páginas</span>
+              <div class="flex flex-col gap-1">
+                <a href="index.html" class="roll text-sm dm-sans-light text-white/90"><span class="roll-inner"><span>Inicio</span><span
+                      aria-hidden="true">Inicio</span></span></a>
+                <a href="quienes-somos.html" class="roll text-sm dm-sans-light text-white/90"><span
+                    class="roll-inner"><span>Quiénes somos</span><span aria-hidden="true">Quiénes somos</span></span></a>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 min-[480px]:gap-3 min-[992px]:gap-4">
+              <span class="dm-sans-semibold text-white">Contacto</span>
+              <div class="flex flex-col gap-1">
+                <a href="mailto:info@grupojrt.com.ar" class="roll text-sm dm-sans-light text-white/90"><span
+                    class="roll-inner"><span>info@grupojrt.com.ar</span><span
+                      aria-hidden="true">info@grupojrt.com.ar</span></span></a>
+                <a href="https://wa.me/5491126633880" target="_blank" class="roll text-sm dm-sans-light text-white/90"><span
+                    class="roll-inner"><span>+54 11 2663-3880</span><span aria-hidden="true">+54 11
+                        2663-3880</span></span></a>
+                <span class="text-sm dm-sans-light text-white/90">Buenos Aires, Argentina</span>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.logos-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
+      breakpoints: {
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 },
+        1324: { slidesPerView: 10 },
+      },
+    });
+
+    function toggleMobileMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      btn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+      document.body.classList.toggle('nav-open', isOpen);
+    }
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.nav-burger');
+      menu.classList.remove('open');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    }
+    document.querySelectorAll('#mobile-menu a').forEach(a => {
+      a.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMobileMenu();
+    });
+  </script>
+
+  <a href="https://wa.me/5491126633880" target="_blank" aria-label="Escribinos por WhatsApp"
+    class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-lg transition-transform duration-300 hover:scale-110">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+    </svg>
+  </a>
+</body>
+
+</html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="shortcut icon" href="logo-blanco.png" type="image/x-icon">
   <style type="text/tailwindcss">
     @theme {
         --color-jrt: #212544;
@@ -24,39 +25,71 @@
 <body class="dm-sans-regular">
 
   <div id="hero"
-    class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/jrt-trabajando.jpeg')] bg-cover bg-center min-h-dvh w-dvw flex flex-col px-2">
-    <nav class="text-black dm-sans-regular pt-2 md:pt-4">
-      <div class="lg:px-0 max-w-custom mx-auto flex justify-between items-center">
-        <div class="md:bg-black text-white w-fit p-2 md:p-4 flex gap-15">
+    class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/jrt-trabajando.jpeg')] bg-cover bg-center min-h-dvh flex flex-col px-2">
+    <nav class="nav-enter relative z-50 text-black dm-sans-regular pt-2 md:pt-4">
+      <div class="lg:px-0 max-w-custom mx-auto flex justify-between items-start">
+        <div class="md:bg-black text-white w-fit p-2 md:p-4 md:py-3 flex gap-15">
 
-          <a href="http://" class="dm-sans-bold flex items-center"><img class="me-2 hidden" src="/logo.png"
+          <a href="http://" class="dm-sans-bold flex items-center"><img class="me-2" src="/logo-blanco.png"
               alt="Grupo JRT" width="35px">Grupo JRT</a>
           <ul class="dm-sans-light hidden md:flex items-center gap-4">
             <li><a href="#inicio" class="roll"><span class="roll-inner"><span>Inicio</span><span
                     aria-hidden="true">Inicio</span></span></a></li>
-            <li><a href="#identidad" class="roll"><span class="roll-inner"><span>Quiénes somos</span><span
-                    aria-hidden="true">Quiénes somos</span></span></a></li>
-            <li><a href="#servicios" class="roll"><span class="roll-inner"><span>Nuestros servicios</span><span
+            <li class="group relative">
+              <a href="quienes-somos.html" class="roll"><span class="roll-inner"><span>Quiénes somos</span><span
+                    aria-hidden="true">Quiénes somos</span></span></a>
+              <ul
+                class="absolute left-[-15px] top-[161%] min-w-max bg-black text-white opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                <li><a href="quienes-somos.html" class="roll-btn block px-4 py-2 hover:bg-black transition-colors"><span
+                      class="roll"><span class="roll-inner"><span>Sobre Nosotros</span><span
+                          aria-hidden="true">Sobre Nosotros</span></span></span></a></li>
+                <li><a href="#" class="roll-btn block px-4 py-2 hover:bg-black transition-colors"><span class="roll"><span
+                        class="roll-inner"><span>Nuestros Clientes</span><span aria-hidden="true">Nuestros
+                          Clientes</span></span></span></a></li>
+              </ul>
+            </li>
+            <li><a href="nuestros-servicios.html" class="roll"><span class="roll-inner"><span>Nuestros servicios</span><span
                     aria-hidden="true">Nuestros servicios</span></span></a></li>
             <li><a href="#faq" class="roll"><span class="roll-inner"><span>FAQs</span><span
                     aria-hidden="true">FAQs</span></span></a></li>
           </ul>
         </div>
 
-        <a href="/" class="roll-btn py-2 px-4 text-white bg-[#C54A0D] hidden md:flex"><span class="roll"><span
+        <a href="/" class="roll-btn py-3 px-4 text-white bg-[#2596be] hidden md:flex"><span class="roll"><span
               class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
-        <a href="/" class="p-4 text-white md:hidden">+</a>
+        <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"
+          onclick="toggleMobileMenu(this)" class="nav-burger md:hidden text-white p-4">
+          <svg class="icon-open w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="icon-close w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
 
       </div>
     </nav>
+
+    <div id="mobile-menu" class="md:hidden">
+      <a href="#inicio" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>Inicio</span><span
+            aria-hidden="true">Inicio</span></span></a>
+      <a href="quienes-somos.html" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>Quiénes
+            somos</span><span aria-hidden="true">Quiénes somos</span></span></a>
+      <a href="nuestros-servicios.html" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>Nuestros
+            servicios</span><span aria-hidden="true">Nuestros servicios</span></span></a>
+      <a href="#faq" class="roll dm-sans-light text-2xl text-white"><span class="roll-inner"><span>FAQs</span><span
+            aria-hidden="true">FAQs</span></span></a>
+      <a href="/" class="roll-btn dm-sans-medium text-lg text-white bg-[#2596be] py-2 px-6"><span class="roll"><span
+            class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
+    </div>
 
     <div id="heroText" class="max-w-custom mx-auto mt-auto w-full pb-10 px-2"> <span class="hidden dm-sans-light text-white uppercase flex flex-col text-2xl md:text-4xl lg:text-7xl pb-8">Grupo JRT</span>
       <h1 class="dm-sans-light text-white uppercase flex flex-col text-4xl lg:text-7xl pb-8">Montajes
         Industriales <span></span> <span class="dm-sans-light-italic">y <span
             class="dm-sans-extrabold-italic">Soluciones</span> Integrales</span></h1>
-      <hr class="border-white pb-6 me-5">
+      <hr class="hr-draw border-white pb-6 me-5">
       <div class="flex flex-col-reverse md:flex-row  justify-between text-white">
-        <div class="mt-auto">[ <span class="roll"><span class="roll-inner"><span>Grupo JRT</span><span
+        <div class="mt-auto hidden lg:block">[ <span class="roll"><span class="roll-inner"><span>Grupo JRT</span><span
                 aria-hidden="true">Grupo JRT</span></span></span> ]</div>
         <div class="md:max-w-[30%]">
           <p class="text-lg mb-6">Especialistas en herrería de obra, redes de incendio<br> y montajes de alta complejidad.
@@ -75,28 +108,63 @@
     </div>
   </div>
 
-  <section>
+  <section id="about" class="max-w-custom mx-auto pt-24 md:pt-30 px-4 md:px-6">
+    <div class="flex flex-col gap-16 md:gap-20">
 
+      <!-- Encabezado: eyebrow + heading a la izq, CTA a la der -->
+      <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-8">
+        <div class="flex flex-col md:flex-row items-start gap-4 gap-[10%] md:w-[54%]">
+          <span
+            class="bg-[#e5f7f9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+              class="dot bg-[#0d308a] ms-1"></span>Nosotros</span>
+          <h2 class="text-4xl md:text-6xl max-w-2xl dm-sans-medium leading-[1.2] text-[#1b1917]">Ingeniería aplicada a la
+            industria.</h2>
+        </div>
+        <a href="quienes-somos.html" class="roll-btn inline-block w-fit text-white bg-[#1b1917] py-2 px-4"><span
+            class="roll"><span class="roll-inner"><span>Conocé más</span><span
+                aria-hidden="true">Conocé más</span></span></span></a>
+      </div>
+
+      <!-- Preview: texto alineado a la derecha arriba de una foto grande -->
+      <div class="flex flex-col gap-10 md:gap-16">
+        <div class="md:self-end md:w-[58%] flex flex-col md:flex-row gap-2 lg:gap-15 md:pe-8">
+          <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+            En Grupo JRT desarrollamos soluciones integrales para la industria, brindando servicios de ingeniería,
+            fabricación, montaje y mantenimiento industrial para empresas de distintos sectores productivos.
+          </p>
+          <p class="leading-[1.64] opacity-80 text-[#1b1917]">
+            Con más de tres décadas de experiencia, acompañamos a nuestros clientes desde la planificación hasta la
+            ejecución de cada proyecto, aportando soluciones eficientes, seguras y adaptadas a las necesidades de
+            cada operación.
+          </p>
+        </div>
+        <div class="w-full h-[240px] md:h-[446px] lg:h-[574px] overflow-hidden rounded-[2px]">
+          <img src="/jrt-trabajando-3.jpeg" alt="Equipo de Grupo JRT trabajando en planta industrial"
+            class="w-full h-full object-cover rounded-[2px] grayscale hover:grayscale-0 transition duration-500">
+        </div>
+      </div>
+
+    </div>
   </section>
 
 
   <!---Sobre Nosotros-->
-  <section class="max-w-custom mx-auto pt-30 px-4 md:px-6">
+  <section id="servicios" class="max-w-custom mx-auto pt-30 px-4 md:px-6 lg:mb-[12%]">
     <span
-      class="mx-auto bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
-        class="dot ms-1"></span>Nuestros servicios</span>
+      class="mx-auto bg-[#e5f7f9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+        class="dot bg-[#0d308a] ms-1"></span>Nuestros servicios</span>
     <h2 class="text-5xl text-center mt-6 dm-sans-medium">Nuestros servicios</h2>
-    <p class="text-lg max-w-4xl mx-auto mt-5 mb-20 text-center">Grupo JRT está formada por profesionales en montaje,
+    <p class="text-lg max-w-3xl mx-auto mt-5 mb-20 text-center">Grupo JRT está formada por profesionales en montaje,
       mantenimiento y especialistas en soldadura industrial con mas de 30 años de experiencia en el rubro. Brindado a
       nuestros clientes el servicio y las soluciones pertinentes.</p>
 
-    <div id="services" class="w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 grid grid-cols-1 gap-1 mb-20">
+    <div id="services" class="w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 grid grid-cols-1 gap-1 mb-20 lg:mb-[12%]">
       <!-- Card 01 -->
       <div class="group relative overflow-hidden rounded-[2px]">
         <div
-          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
         </div>
-        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+        <div class="relative h-[380px] p-5 border border-[#0d308a] rounded-[2px] flex flex-col justify-between">
           <div
             class="invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
             01.</div>
@@ -116,9 +184,9 @@
       <!-- Card 02 -->
       <div class="group relative overflow-hidden rounded-[2px]">
         <div
-          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
         </div>
-        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+        <div class="relative h-[380px] p-5 border border-[#0d308a] rounded-[2px] flex flex-col justify-between">
           <div
             class="invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
             02.</div>
@@ -138,9 +206,9 @@
       <!-- Card 03 -->
       <div class="group relative overflow-hidden rounded-[2px]">
         <div
-          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
         </div>
-        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+        <div class="relative h-[380px] p-5 border border-[#0d308a] rounded-[2px] flex flex-col justify-between">
           <div
             class=" invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
             03.</div>
@@ -170,9 +238,9 @@
       <!-- Card 04 -->
       <div class="group relative overflow-hidden rounded-[2px]">
         <div
-          class="absolute bottom-0 right-0 w-0 h-0 bg-[#C54A0D] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
+          class="absolute bottom-0 right-0 w-0 h-0 bg-[#2596be] transition-all duration-500 ease-out group-hover:w-full group-hover:h-full">
         </div>
-        <div class="relative h-[380px] p-5 border border-[#aaa] rounded-[2px] flex flex-col justify-between">
+        <div class="relative h-[380px] p-5 border border-[#0d308a] rounded-[2px] flex flex-col justify-between">
           <div
             class="invisible text-sm leading-[0.9] dm-sans-semibold text-[#1b1917] transition-colors duration-500 group-hover:text-white">
             04.</div>
@@ -193,22 +261,22 @@
   </section>
 
   <!-- Testimonios -->
-  <section id="testimonios" class="bg-[#f5f1eb]">
+  <section id="testimonios" class="bg-[#e0e7ec]">
     <div class="max-w-custom mx-auto px-4 md:px-6 py-24">
       <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-[60px] lg:mb-[100px]">
         <div class="flex flex-col items-start gap-5">
           <span
-            class="hidden bg-[#e4e0d9] text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
+            class="text-[#1b1917] px-[10px] py-[12px] w-fit flex items-center gap-2 text-[15px] dm-sans-medium"><span
               class="dot ms-1"></span>Testimonios</span>
-          <h2 class="text-[40px] md:text-5xl lg:text-6xl dm-sans-medium leading-[1.22]">Lo que dicen nuestros clientes
+          <h2 class="text-[40px] md:text-5xl lg:text-6xl dm-sans-medium leading-[1.22]">Clientes satisfechos
           </h2>
         </div>
         <div class="flex gap-2">
           <button
-            class="testi-prev w-8 h-8 bg-[#C54A0D] rounded-[2px] flex items-center justify-center text-white cursor-pointer"><i
+            class="testi-prev w-8 h-8 border bg-white border-white rounded-[2px] flex items-center justify-center text-black cursor-pointer"><i
               class="ph ph-caret-left"></i></button>
           <button
-            class="testi-next w-8 h-8 bg-[#C54A0D] rounded-[2px] flex items-center justify-center text-white cursor-pointer"><i
+            class="testi-next w-8 h-8 border bg-white border-white rounded-[2px] flex items-center justify-center text-black cursor-pointer"><i
               class="ph ph-caret-right"></i></button>
         </div>
       </div>
@@ -284,9 +352,6 @@
             </div>
           </div>
         </div>
-        <div
-          class="hidden md:block absolute right-0 top-0 h-full w-[30%] bg-[linear-gradient(90deg,transparent,#f5f1eb)] pointer-events-none z-10">
-        </div>
       </div>
     </div>
   </section>
@@ -295,14 +360,15 @@
 
 
 
-    <h3 class="dm-sans-medium text-jrt mb-10 text-center text-2xl">Algunas de las empresas que nos eligen</h3>
+    <h3 class="dm-sans-medium text-black mb-10 text-center text-2xl">Algunas de las empresas que nos eligen</h3>
+    <div class="relative">
     <div class="swiper logos-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="/logos/acindar.png" alt="Acindar"></div>
         <div class="swiper-slide"><img src="/logos/arcelor.png" alt="Grupo Arcelor Mittal"></div>
         <div class="swiper-slide"><img src="/logos/sunchemical.png" alt="Sun Chemical INK"></div>
-        <div class="swiper-slide">Obras y Sistemas</div>
-        <div class="swiper-slide">Mirabilia</div>
+        <div class="swiper-slide text-center">Obras y Sistemas</div>
+        <div class="swiper-slide text-center">Mirabilia</div>
         <div class="swiper-slide"><img src="/logos/spicer.jpg" alt="Spicer Ejes Pesados SRL"></div>
         <div class="swiper-slide"><img src="/logos/metalsa.png" alt="Metalsa Argentina SA"></div>
         <div class="swiper-slide"><img src="/logos/tropical.jpg" alt="Tropical Argentina"></div>
@@ -312,20 +378,25 @@
         <div class="swiper-slide"><img src="/logos/grupomitre.jpg" alt="Grupo Mitre"></div>
       </div>
     </div>
+    <div class="absolute left-0 top-0 h-full w-[15%] bg-[linear-gradient(90deg,white,transparent)] pointer-events-none z-10">
+    </div>
+    <div class="absolute right-0 top-0 h-full w-[15%] bg-[linear-gradient(90deg,transparent,white)] pointer-events-none z-10">
+    </div>
+    </div>
 
 
 
   </section>
 
   <section id="contact"
-    class="py-24 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/jrt-trabajando-3.jpeg')] bg-cover bg-center">
+    class="py-24 bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.95)),url('/jrt-trabajando-3.jpeg')] bg-cover bg-center">
   <div class="max-w-custom mx-auto px-4 md:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
       <!-- Header -->
       <div class="flex flex-col gap-5 lg:sticky lg:top-[20%]">
-        <h1 class="text-center md:text-start text-[38px] md:text-[48px] leading-[1.2] font-medium text-white">
-          HABLEMOS<br>DE TU PROYECTO
+        <h1 class="text-center md:text-start text-[38px] md:text-6xl leading-[1.2] font-medium text-white">
+         Hablemos<br>de tu proyecto
         </h1>
         <div class="text-center md:text-start flex flex-col gap-1 w-full md:w-[90%]">
           <p class="opacity-100 font-medium text-white">¿Necesitás asesoramiento? Contanos.</p>
@@ -337,34 +408,37 @@
 
       <!-- Form Card -->
       <div class="flex justify-center items-center">
-        <div class="w-full max-w-[480px] p-8 rounded-[4px] bg-white shadow-[0_0_8px_1px_#0003] flex flex-col gap-8">
+        <div class="bg-white w-full max-w-[562px] p-8 flex flex-col gap-8 rounded-[2px]">
           <form class="flex flex-col gap-5">
             <div class="flex flex-col gap-5">
 
               <div class="flex flex-col gap-1">
-                <label for="name" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Nombre</label>
-                <input type="text" id="name" name="name" required="" placeholder="Juan Pérez" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#C54A0D] transition-colors">
+                <label for="name" class="font-medium leading-[1.48] mb-0 text-black">Nombre</label>
+                <input type="text" id="name" name="name" required="" placeholder="Nombre" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#2596be] transition-colors">
               </div>
 
               <div class="flex flex-col gap-1">
                 <label for="email" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Correo electrónico</label>
-                <input type="email" id="email" name="email" required="" placeholder="juan@empresa.com" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#C54A0D] transition-colors">
+                <input type="email" id="email" name="email" required="" placeholder="juan@empresa.com" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#2596be] transition-colors">
               </div>
 
               <div class="flex flex-col gap-1">
                 <label for="subject" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Asunto</label>
-                <input type="text" id="subject" name="subject" required="" placeholder="¿Qué necesitás?" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#C54A0D] transition-colors">
+                <input type="text" id="subject" name="subject" required="" placeholder="¿Qué necesitás?" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 focus:outline-none focus:border-[#2596be] transition-colors">
               </div>
 
               <div class="flex flex-col gap-1">
                 <label for="message" class="font-medium leading-[1.48] mb-0 text-[#1b1917]">Mensaje</label>
-                <textarea id="message" name="message" required="" placeholder="Hola, quería consultar..." maxlength="5000" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 min-h-[140px] resize-none focus:outline-none focus:border-[#C54A0D] transition-colors"></textarea>
+                <textarea id="message" name="message" required="" placeholder="Hola, quería consultar..." maxlength="5000" class="border-0 border-b border-[#aaa] bg-transparent text-[#1b1917] leading-[1.64] py-3 mb-0 min-h-[140px] resize-none focus:outline-none focus:border-[#2596be] transition-colors"></textarea>
               </div>
 
             </div>
 
             <div class="w-full">
-              <input type="submit" value="Enviar mensaje" class="w-full py-3 px-4 rounded-[2px] bg-[#C54A0D] text-white text-sm leading-[1.68] transition-colors duration-300 hover:bg-[#423e3a] cursor-pointer">
+              <button type="submit"
+                class="roll-btn flex items-center justify-center w-full py-3 px-4 rounded-[2px] bg-[#2596be] text-white text-sm leading-[1.68] transition-colors duration-300 hover:bg-[#1b1917] cursor-pointer"><span
+                  class="roll"><span class="roll-inner"><span>Enviar mensaje</span><span
+                      aria-hidden="true">Enviar mensaje</span></span></span></button>
             </div>
           </form>
         </div>
@@ -374,14 +448,295 @@
   </div>
 </section>
 
-<section id="faq" class="bg-[#1b1917] py-24">
-  <div class="max-w-custom mx-auto px-6">
+<!-- Servicios destacados: réplica de .section.services de stoop-template.webflow.io.
+     Stack sticky de 520vh con 4 paneles apilados (z 4→1) que se colapsan en altura
+     por scroll (interacción "Service Scroll" del original: keyframes 22→40, 44→57, 60→75) -->
+<section class="bg-[#1b1917]">
+  <div class="max-w-custom px-4 md:px-6 mx-auto w-full">
+    <div class="py-[138px]">
+      <div class="flex flex-col gap-12 min-[768px]:gap-[60px] min-[992px]:gap-[100px]">
+
+        <!-- Header: entra con fade + slide desde abajo al scrollear (slideInBottom del original) -->
+        <div data-service-header
+          class="flex w-full flex-col items-center gap-5 self-center translate-y-10 opacity-0 transition-all duration-700 ease-out min-[480px]:w-[80%] min-[992px]:w-[48%]">
+          <div class="flex items-center gap-2 rounded-[2px] bg-[#e5f7f9] px-3 py-2">
+            <span class="h-2 w-2 rounded-full bg-[#0d308a]"></span>
+            <span class="text-sm leading-[1.65] dm-sans-medium text-[#1b1917]">Servicios</span>
+          </div>
+          <h2 class="text-center text-[36px] leading-[1.22] dm-sans-medium text-white min-[768px]:text-[60px]">Servicios
+            de alta exigencia para la industria</h2>
+        </div>
+
+        <!-- Sticky stack -->
+        <div data-service-sticky class="relative h-[520vh]">
+          <div class="sticky top-0 flex min-h-[100vh] flex-col justify-center overflow-hidden">
+
+            <!-- Panel 01 -->
+            <div data-service-panel="1" class="absolute inset-0 z-[4] h-[100vh] overflow-hidden">
+              <div class="flex min-h-[100vh] flex-col justify-center">
+                <div class="rounded-[2px]">
+                  <div
+                    class="relative h-[85vh] min-[480px]:h-[90vh] min-[768px]:h-[85vh] min-[992px]:h-[90vh]">
+                    <img src="/jrt-trabajando-2.png" alt="Montajes Industriales" loading="lazy"
+                      class="absolute inset-0 h-full w-full object-cover saturate-[0.85]">
+                    <div class="absolute inset-0 bg-[#1b1917] opacity-[0.64]"></div>
+                    <a href="#contact" class="relative block h-full w-full">
+                      <div class="flex h-full flex-col justify-between gap-3 p-6 min-[480px]:gap-0">
+                        <div
+                          class="flex h-full flex-col gap-2 min-[480px]:h-auto min-[480px]:flex-row min-[480px]:justify-between">
+                          <div
+                            class="flex items-center text-[20px] leading-[1.6] tracking-[-0.6px] dm-sans-semibold text-white">
+                            <span>/ 0</span><span>1</span>
+                          </div>
+                          <div class="flex items-center gap-2 rounded-[2px] p-1 min-[480px]:p-0">
+                            <span class="h-2 w-2 rounded-full bg-[#0d308a]"></span>
+                            <span class="text-sm leading-[1.65] text-white">Montajes Industriales</span>
+                          </div>
+                        </div>
+                        <div
+                          class="flex w-full items-end justify-end self-end min-[768px]:w-[52%] min-[992px]:w-[30%]">
+                          <p class="dm-sans-light leading-[1.64] text-white opacity-[0.86]">Montaje y desmontaje de
+                            máquinas en plantas industriales.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 02 -->
+            <div data-service-panel="2" class="absolute inset-0 z-[3] h-[100vh] overflow-hidden">
+              <div class="flex min-h-[100vh] flex-col justify-center">
+                <div class="rounded-[2px]">
+                  <div
+                    class="relative h-[85vh] min-[480px]:h-[90vh] min-[768px]:h-[85vh] min-[992px]:h-[90vh]">
+                    <img src="/jrt-trabajando-3.jpeg" alt="Redes de Incendio" loading="lazy"
+                      class="absolute inset-0 h-full w-full object-cover saturate-[0.85]">
+                    <div class="absolute inset-0 bg-[#1b1917] opacity-[0.64]"></div>
+                    <a href="#contact" class="relative block h-full w-full">
+                      <div class="flex h-full flex-col justify-between gap-3 p-6 min-[480px]:gap-0">
+                        <div
+                          class="flex h-full flex-col gap-2 min-[480px]:h-auto min-[480px]:flex-row min-[480px]:justify-between">
+                          <div
+                            class="flex items-center text-[20px] leading-[1.6] tracking-[-0.6px] dm-sans-semibold text-white">
+                            <span>/ 0</span><span>2</span>
+                          </div>
+                          <div class="flex items-center gap-2 rounded-[2px] p-1 min-[480px]:p-0">
+                            <span class="h-2 w-2 rounded-full bg-[#0d308a]"></span>
+                            <span class="text-sm leading-[1.65] text-white">Redes de Incendio</span>
+                          </div>
+                        </div>
+                        <div
+                          class="flex w-full items-end justify-end self-end min-[768px]:w-[52%] min-[992px]:w-[30%]">
+                          <p class="dm-sans-light leading-[1.64] text-white opacity-[0.86]">Ofrecemos el servicio
+                            especializado en el diseño e instalación del sistema de red de incendio.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 03 -->
+            <div data-service-panel="3" class="absolute inset-0 z-[2] h-[100vh] overflow-hidden">
+              <div class="flex min-h-[100vh] flex-col justify-center">
+                <div class="rounded-[2px]">
+                  <div
+                    class="relative h-[85vh] min-[480px]:h-[90vh] min-[768px]:h-[85vh] min-[992px]:h-[90vh]">
+                    <img src="/jrt-trabajando.jpeg" alt="Instalación de Cañerías" loading="lazy"
+                      class="absolute inset-0 h-full w-full object-cover saturate-[0.85]">
+                    <div class="absolute inset-0 bg-[#1b1917] opacity-[0.64]"></div>
+                    <a href="#contact" class="relative block h-full w-full">
+                      <div class="flex h-full flex-col justify-between gap-3 p-6 min-[480px]:gap-0">
+                        <div
+                          class="flex h-full flex-col gap-2 min-[480px]:h-auto min-[480px]:flex-row min-[480px]:justify-between">
+                          <div
+                            class="flex items-center text-[20px] leading-[1.6] tracking-[-0.6px] dm-sans-semibold text-white">
+                            <span>/ 0</span><span>3</span>
+                          </div>
+                          <div class="flex items-center gap-2 rounded-[2px] p-1 min-[480px]:p-0">
+                            <span class="h-2 w-2 rounded-full bg-[#0d308a]"></span>
+                            <span class="text-sm leading-[1.65] text-white">Instalación de Cañerías</span>
+                          </div>
+                        </div>
+                        <div
+                          class="flex w-full items-end justify-end self-end min-[768px]:w-[52%] min-[992px]:w-[30%]">
+                          <p class="dm-sans-light leading-[1.64] text-white opacity-[0.86]">Diseño e instalación de
+                            piping para agua, aire comprimido, vapor y efluentes industriales.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 04 -->
+            <div data-service-panel="4" class="absolute inset-0 z-[1] h-[100vh] overflow-hidden">
+              <div class="flex min-h-[100vh] flex-col justify-center">
+                <div class="rounded-[2px]">
+                  <div
+                    class="relative h-[85vh] min-[480px]:h-[90vh] min-[768px]:h-[85vh] min-[992px]:h-[90vh]">
+                    <img src="/jrt-trabajando-2.png" alt="Especialistas en Soldadura" loading="lazy"
+                      class="absolute inset-0 h-full w-full object-cover saturate-[0.85]">
+                    <div class="absolute inset-0 bg-[#1b1917] opacity-[0.64]"></div>
+                    <a href="#contact" class="relative block h-full w-full">
+                      <div class="flex h-full flex-col justify-between gap-3 p-6 min-[480px]:gap-0">
+                        <div
+                          class="flex h-full flex-col gap-2 min-[480px]:h-auto min-[480px]:flex-row min-[480px]:justify-between">
+                          <div
+                            class="flex items-center text-[20px] leading-[1.6] tracking-[-0.6px] dm-sans-semibold text-white">
+                            <span>/ 0</span><span>4</span>
+                          </div>
+                          <div class="flex items-center gap-2 rounded-[2px] p-1 min-[480px]:p-0">
+                            <span class="h-2 w-2 rounded-full bg-[#0d308a]"></span>
+                            <span class="text-sm leading-[1.65] text-white">Especialistas en Soldadura</span>
+                          </div>
+                        </div>
+                        <div
+                          class="flex w-full items-end justify-end self-end min-[768px]:w-[52%] min-[992px]:w-[30%]">
+                          <p class="dm-sans-light leading-[1.64] text-white opacity-[0.86]">Soldadura especializada
+                            para todo tipo de materiales.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insights: réplica de .insights-wrapper de stoop-template.webflow.io.
+     Grid de 3 cards (2 en tablet, 1 en mobile) con thumbnail, título y footer con fecha + link -->
+<section class="bg-[#f5f1eb]">
+  <div class="max-w-custom px-4 md:px-6 mx-auto w-full">
+    <div class="py-[138px]">
+      <div class="flex flex-col gap-12 min-[768px]:gap-[60px] min-[992px]:gap-[100px]">
+
+        <!-- Header: pill + título a la izq, botón a la der (entra con slideInBottom) -->
+        <div data-reveal
+          class="flex flex-col gap-5 opacity-0 translate-y-10 transition-all duration-700 ease-out min-[480px]:flex-row min-[480px]:items-end min-[480px]:justify-between">
+          <div class="flex w-full flex-col gap-3 min-[768px]:gap-4 min-[992px]:gap-5">
+            <div class="flex w-fit items-center gap-2 rounded-[2px] bg-[#e5f7f9] px-3 py-2">
+              <span class="h-2 w-2 rounded-full bg-[#0d308a]"></span>
+              <span class="text-sm leading-[1.65] dm-sans-medium text-[#1b1917]">Insights</span>
+            </div>
+            <h2
+              class="w-full text-[36px] leading-[1.22] dm-sans-medium text-[#1b1917] min-[768px]:text-[60px]">
+              Colección de insights</h2>
+          </div>
+          <a href="#"
+            class="roll-btn inline-block w-fit shrink-0 rounded-[2px] bg-[#e4e0d9] px-4 py-2 text-sm dm-sans-medium text-[#1b1917]"><span
+              class="roll"><span class="roll-inner"><span>Ver todos</span><span aria-hidden="true">Ver
+                  todos</span></span></span></a>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 gap-3 min-[768px]:grid-cols-2 min-[768px]:gap-4 min-[992px]:grid-cols-3">
+
+          <article data-reveal
+            class="opacity-0 translate-y-10 transition-all duration-700 ease-out">
+            <div class="flex flex-col gap-2 overflow-hidden rounded-[4px] bg-white">
+              <div class="h-[200px] min-[480px]:h-[240px] min-[768px]:h-[280px] min-[992px]:h-[240px]">
+                <img src="/jrt-trabajando.jpeg" alt="Seguridad e higiene en obra" loading="lazy"
+                  class="h-full w-full object-cover">
+              </div>
+              <div class="flex flex-col gap-4 p-3 min-[992px]:gap-6 min-[992px]:p-5">
+                <h3 class="text-2xl leading-[1.5] dm-sans-medium tracking-[-0.8px] text-[#1b1917] md:min-h-[100px]">Seguridad e higiene
+                  en obra: los estándares que aplicamos en cada montaje</h3>
+                <div class="flex items-center justify-between border-t border-[#aaa] pt-2 min-[992px]:pt-4">
+                  <span class="text-sm text-[#1b1917]">14 de enero, 2026</span>
+                  <a href="#" class="group flex items-center gap-3 text-sm dm-sans-medium text-[#1b1917]">
+                    <span>Leer insight</span>
+                    <span class="relative block h-4 w-4 overflow-hidden">
+                      <i
+                        class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                      <i aria-hidden="true"
+                        class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-reveal style="transition-delay:75ms"
+            class="opacity-0 translate-y-10 transition-all duration-700 ease-out">
+            <div class="flex flex-col gap-2 overflow-hidden rounded-[4px] bg-white">
+              <div class="h-[200px] min-[480px]:h-[240px] min-[768px]:h-[280px] min-[992px]:h-[240px]">
+                <img src="/jrt-trabajando-2.png" alt="Redes de incendio en planta" loading="lazy"
+                  class="h-full w-full object-cover">
+              </div>
+              <div class="flex flex-col gap-4 p-3 min-[992px]:gap-6 min-[992px]:p-5">
+                <h3 class="text-2xl leading-[1.5] dm-sans-medium tracking-[-0.8px] text-[#1b1917] md:min-h-[100px]">Redes de incendio:
+                  claves para diseñar un sistema confiable en planta</h3>
+                <div class="flex items-center justify-between border-t border-[#aaa] pt-2 min-[992px]:pt-4">
+                  <span class="text-sm text-[#1b1917]">19 de enero, 2026</span>
+                  <a href="#" class="group flex items-center gap-3 text-sm dm-sans-medium text-[#1b1917]">
+                    <span>Leer insight</span>
+                    <span class="relative block h-4 w-4 overflow-hidden">
+                      <i
+                        class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                      <i aria-hidden="true"
+                        class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-reveal style="transition-delay:150ms"
+            class="opacity-0 translate-y-10 transition-all duration-700 ease-out">
+            <div class="flex flex-col gap-2 overflow-hidden rounded-[4px] bg-white">
+              <div class="h-[200px] min-[480px]:h-[240px] min-[768px]:h-[280px] min-[992px]:h-[240px]">
+                <img src="/jrt-trabajando-3.jpeg" alt="Mantenimiento de cañerías industriales" loading="lazy"
+                  class="h-full w-full object-cover">
+              </div>
+              <div class="flex flex-col gap-4 p-3 min-[992px]:gap-6 min-[992px]:p-5">
+                <h3 class="text-2xl leading-[1.5] dm-sans-medium tracking-[-0.8px] text-[#1b1917] md:min-h-[100px]">Mantenimiento de
+                  cañerías industriales: cómo evitar paradas de planta</h3>
+                <div class="flex items-center justify-between border-t border-[#aaa] pt-2 min-[992px]:pt-4">
+                  <span class="text-sm text-[#1b1917]">30 de enero, 2026</span>
+                  <a href="#" class="group flex items-center gap-3 text-sm dm-sans-medium text-[#1b1917]">
+                    <span>Leer insight</span>
+                    <span class="relative block h-4 w-4 overflow-hidden">
+                      <i
+                        class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                      <i aria-hidden="true"
+                        class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bg-custom">
+<section id="faq" class="py-24">
+  <div class="max-w-custom mx-auto px-4 md:px-6">
     <div class="flex flex-col lg:flex-row justify-between gap-12">
 
       <!-- Header row -->
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-4">
-          <span class="bg-[#e4e0d9] text-[#1b1917] px-3 py-2 w-fit rounded-[2px] flex items-center gap-2">
+          <span class="bg-[#e5f7f9] text-[#1b1917] px-3 py-2 w-fit rounded-[2px] flex items-center gap-2">
             <span class="dot"></span>
             <span class="text-sm font-medium">FAQs</span>
           </span>
@@ -390,17 +745,18 @@
           </h2>
         </div>
 
-        <div class="flex flex-col pt-4 border-t border-[#423e3a] md:pt-0 md:border-t-0">
+        <div class="flex flex-col pt-4 border-t border-white md:pt-0 md:border-t-0">
           <p class="text-white font-medium">¿Tenés otra consulta? Escribinos</p>
           <div class="flex flex-col gap-2">
             <div class="flex items-center gap-3">
-              <span class="text-[#e4e0d9]">✉</span>
-              <span class="opacity-80 text-white">contacto@grupojrt.com</span>
+              <span class="text-[#e5f7f9]">✉</span>
+              <span class="opacity-80 text-white">info@grupojrt.com.ar</span>
             </div>
             <div class="flex items-center gap-3">
-              <span class="text-[#e4e0d9]">☎</span>
-              <span class="opacity-80 text-white">+54 11 0000 0000</span>
+              <span class="text-[#e5f7f9]">☎</span>
+              <span class="opacity-80 text-white">+54 11 2663-3880</span>
             </div>
+  
           </div>
         </div>
       </div>
@@ -408,7 +764,7 @@
       <!-- Questions -->
       <div class="flex flex-col gap-6 w-full lg:w-[50%]">
 
-        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+        <div class="faq-item cursor-pointer border-b border-white pb-3 overflow-hidden">
           <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
             <p class="text-[20px] text-white font-medium w-[85%]">¿Qué tipos de montajes industriales realizan?</p>
             <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
@@ -423,7 +779,7 @@
           </div>
         </div>
 
-        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+        <div class="faq-item cursor-pointer border-b border-white pb-3 overflow-hidden">
           <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
             <p class="text-[20px] text-white font-medium w-[85%]">¿Se encargan de la instalación de redes de incendio?</p>
             <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
@@ -438,7 +794,7 @@
           </div>
         </div>
 
-        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+        <div class="faq-item cursor-pointer border-b border-white pb-3 overflow-hidden">
           <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
             <p class="text-[20px] text-white font-medium w-[85%]">¿Qué alcance tiene el servicio de herrería de obra?</p>
             <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
@@ -453,7 +809,7 @@
           </div>
         </div>
 
-        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+        <div class="faq-item cursor-pointer border-b border-white pb-3 overflow-hidden">
           <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
             <p class="text-[20px] text-white font-medium w-[85%]">¿Cuentan con taller propio para prefabricación?</p>
             <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
@@ -468,7 +824,7 @@
           </div>
         </div>
 
-        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+        <div class="faq-item cursor-pointer border-b border-white pb-3 overflow-hidden">
           <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
             <p class="text-[20px] text-white font-medium w-[85%]">¿Cumplen con las normativas de seguridad para el ingreso a plantas?</p>
             <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
@@ -483,7 +839,7 @@
           </div>
         </div>
 
-        <div class="faq-item cursor-pointer border-b border-[#423e3a] pb-3 overflow-hidden">
+        <div class="faq-item cursor-pointer border-b border-white pb-3 overflow-hidden">
           <div class="flex justify-between items-center py-1" onclick="this.parentElement.classList.toggle('open')">
             <p class="text-[20px] text-white font-medium w-[85%]">¿Cómo es el proceso para solicitar una cotización?</p>
             <span class="plus w-4 h-4 relative flex items-center justify-center shrink-0">
@@ -503,6 +859,111 @@
   </div>
 </section>
 
+<!-- Footer -->
+<footer class="text-white">
+  <div class="max-w-custom mx-auto w-full px-4 md:px-6 py-[138px]">
+    <div class="flex flex-col gap-12">
+
+      <!-- Fila superior -->
+      <div
+        class="flex flex-col gap-10 min-[480px]:gap-8 min-[992px]:flex-row min-[992px]:items-stretch min-[992px]:justify-between">
+        <div
+          class="flex w-full flex-col gap-8 min-[480px]:flex-row min-[480px]:items-start min-[480px]:justify-between min-[992px]:w-[20%] min-[992px]:flex-col min-[992px]:justify-start">
+          <a href="/" class="block w-[84px] shrink-0"><img src="/logo-blanco.png" alt="Grupo JRT"
+              class="h-auto w-full"></a>
+          <div class="flex flex-col items-start gap-4 min-[480px]:w-[38%] min-[992px]:w-full">
+            <h3 class="text-2xl leading-[1.5] dm-sans-medium tracking-[-0.8px] text-white">Ingeniería aplicada a la
+              industria.</h3>
+            <a href="#contact"
+              class="roll-btn inline-block w-fit rounded-[2px] bg-[#e4e0d9] px-4 py-2 text-sm dm-sans-medium text-[#1b1917]"><span
+                class="roll"><span class="roll-inner"><span>Hablemos de tu proyecto</span><span
+                    aria-hidden="true">Hablemos de tu proyecto</span></span></span></a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 min-[992px]:justify-between">
+          <div class="order-last flex md:justify-center min-[992px]:order-none min-[992px]:justify-end">
+            <span class="text-sm text-[#e4e0d9]">2026 © Grupo JRT. Todos los derechos reservados.</span>
+          </div>
+          <div class="flex flex-col items-start gap-2 min-[992px]:flex-row min-[992px]:gap-6">
+            <a href="https://www.instagram.com/grupo.jrt/" target="_blank"
+              class="group flex items-center gap-1 text-sm dm-sans-medium text-white">
+              <span>Instagram</span>
+              <span class="relative block h-4 w-4 overflow-hidden">
+                <i
+                  class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                <i aria-hidden="true"
+                  class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+              </span>
+            </a>
+            <a href="https://wa.me/5491126633880" target="_blank"
+              class="group flex items-center gap-1 text-sm dm-sans-medium text-white">
+              <span>WhatsApp</span>
+              <span class="relative block h-4 w-4 overflow-hidden">
+                <i
+                  class="ph ph-arrow-up-right absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+                <i aria-hidden="true"
+                  class="ph ph-arrow-up-right absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila inferior -->
+      <div class="flex flex-col gap-8 border-t border-[#423e3a] pt-6 min-[992px]:flex-row min-[992px]:justify-between">
+        <div class="order-last flex items-end justify-center min-[768px]:justify-start min-[992px]:order-none">
+          <a href="#top" class="group flex items-center gap-2 text-sm dm-sans-medium text-white">
+            <span class="relative block h-4 w-4 overflow-hidden">
+              <i
+                class="ph ph-arrow-up absolute left-0 top-0 leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+              <i aria-hidden="true"
+                class="ph ph-arrow-up absolute left-0 top-full leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"></i>
+            </span>
+            Volver arriba</a>
+        </div>
+        <nav
+          class="flex flex-col gap-6 min-[480px]:flex-row min-[480px]:justify-between min-[768px]:gap-12 min-[992px]:gap-[100px]">
+          <div class="flex flex-col gap-2 min-[480px]:gap-3 min-[992px]:gap-4">
+            <span class="dm-sans-semibold text-white">Secciones</span>
+            <div class="flex flex-col gap-1">
+              <a href="nuestros-servicios.html" class="roll text-sm dm-sans-light text-white/90"><span class="roll-inner"><span>Nuestros
+                      servicios</span><span aria-hidden="true">Nuestros servicios</span></span></a>
+              <a href="#testimonios" class="roll text-sm dm-sans-light text-white/90"><span
+                  class="roll-inner"><span>Testimonios</span><span aria-hidden="true">Testimonios</span></span></a>
+              <a href="#faq" class="roll text-sm dm-sans-light text-white/90"><span class="roll-inner"><span>FAQs</span><span
+                    aria-hidden="true">FAQs</span></span></a>
+              <a href="#contact" class="roll text-sm dm-sans-light text-white/90"><span
+                  class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 min-[480px]:gap-3 min-[992px]:gap-4">
+            <span class="dm-sans-semibold text-white">Páginas</span>
+            <div class="flex flex-col gap-1">
+              <a href="#inicio" class="roll text-sm dm-sans-light text-white/90"><span class="roll-inner"><span>Inicio</span><span
+                    aria-hidden="true">Inicio</span></span></a>
+              <a href="quienes-somos.html" class="roll text-sm dm-sans-light text-white/90"><span
+                  class="roll-inner"><span>Quiénes somos</span><span aria-hidden="true">Quiénes somos</span></span></a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 min-[480px]:gap-3 min-[992px]:gap-4">
+            <span class="dm-sans-semibold text-white">Contacto</span>
+            <div class="flex flex-col gap-1">
+              <a href="mailto:info@grupojrt.com.ar" class="roll text-sm dm-sans-light text-white/90"><span
+                  class="roll-inner"><span>info@grupojrt.com.ar</span><span
+                    aria-hidden="true">info@grupojrt.com.ar</span></span></a>
+              <a href="https://wa.me/5491126633880" target="_blank" class="roll text-sm dm-sans-light text-white/90"><span
+                  class="roll-inner"><span>+54 11 2663-3880</span><span aria-hidden="true">+54 11
+                      2663-3880</span></span></a>
+              <span class="text-sm dm-sans-light text-white/90">Buenos Aires, Argentina</span>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</footer>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -512,26 +973,124 @@
       loop: true,
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false,
       },
       breakpoints: {
         768: { slidesPerView: 4 },
         1024: { slidesPerView: 5 },
+        1324: { slidesPerView: 10 },
       },
     });
 
     new Swiper('.testi-swiper', {
       slidesPerView: 'auto',
       spaceBetween: 8,
-      loop: true,
       speed: 500,
-      allowTouchMove: false,
+      watchOverflow: true,
       navigation: {
         nextEl: '.testi-next',
         prevEl: '.testi-prev',
       },
+      breakpoints: {
+        768: { slidesPerView: 1 },
+        1024: { slidesPerView: 2 },
+        1324: { slidesPerView: 3 },
+      },
+    });
+
+    function toggleMobileMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      btn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+      document.body.classList.toggle('nav-open', isOpen);
+    }
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.nav-burger');
+      menu.classList.remove('open');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    }
+    document.querySelectorAll('#mobile-menu a').forEach(a => {
+      a.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMobileMenu();
     });
   </script>
+
+  <!-- Sección servicios sticky: réplica de la interacción IX2 "Service Scroll" (a-18) de Webflow.
+       Progreso medido como el original: 0% cuando el top del wrapper entra al viewport,
+       100% cuando el bottom sale. Keyframes: panel1 22→40, panel2 44→57, panel3 60→75 (100vh→0vh). -->
+  <script>
+    (() => {
+      const wrap = document.querySelector('[data-service-sticky]');
+      if (!wrap) return;
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const panels = [
+        { el: wrap.querySelector('[data-service-panel="1"]'), from: 22, to: 40 },
+        { el: wrap.querySelector('[data-service-panel="2"]'), from: 44, to: 57 },
+        { el: wrap.querySelector('[data-service-panel="3"]'), from: 60, to: 75 },
+      ];
+      let target = 0, current = 0, rafId = null;
+
+      function measure() {
+        const rect = wrap.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const total = rect.height + vh;
+        target = Math.min(Math.max((vh - rect.top) / total, 0), 1) * 100;
+      }
+
+      function apply(p) {
+        for (const panel of panels) {
+          const t = Math.min(Math.max((p - panel.from) / (panel.to - panel.from), 0), 1);
+          panel.el.style.height = (100 - t * 100) + 'vh';
+        }
+      }
+
+      function tick() {
+        current += (target - current) * 0.09; // smoothing 90 de Webflow ≈ lerp suave
+        apply(current);
+        if (Math.abs(target - current) > 0.01) {
+          rafId = requestAnimationFrame(tick);
+        } else {
+          rafId = null;
+        }
+      }
+
+      function onScroll() {
+        measure();
+        if (reduced) { apply(target); return; }
+        if (!rafId) rafId = requestAnimationFrame(tick);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+
+      // Reveal: slideInBottom del original (fade + sube 40px al entrar al viewport)
+      const revealEls = document.querySelectorAll('[data-service-header], [data-reveal]');
+      if (revealEls.length) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            io.unobserve(entry.target);
+          });
+        }, { threshold: 0.2 });
+        revealEls.forEach((el) => io.observe(el));
+      }
+    })();
+  </script>
+
+  <a href="https://wa.me/5491126633880" target="_blank" aria-label="Escribinos por WhatsApp"
+    class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-lg transition-transform duration-300 hover:scale-110">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+    </svg>
+  </a>
 </body>
 
 </html>
