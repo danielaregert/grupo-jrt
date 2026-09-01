@@ -74,7 +74,7 @@ try {
     $mail->addReplyTo($email, $name);
 
     $mail->isHTML(true);
-    $mail->Subject = 'Nuevo mensaje de contacto: ' . $subject;
+    $mail->Subject = 'Contacto web: ' . $subject;
     $mail->Body = sprintf(
         '<p><strong>Nombre:</strong> %1$s</p>' .
         '<p><strong>Email:</strong> %2$s</p>' .
