@@ -39,7 +39,7 @@
               <a href="quienes-somos.html" class="roll"><span class="roll-inner"><span>Quiénes somos</span><span
                     aria-hidden="true">Quiénes somos</span></span></a>
               <ul
-                class="absolute left-[-15px] top-[161%] min-w-max bg-black text-white opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                class="absolute left-[-15px] top-[161%] min-w-max bg-Noblack text-white opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                 <li><a href="quienes-somos.html" class="roll-btn block px-4 py-2 hover:bg-black transition-colors"><span
                       class="roll"><span class="roll-inner"><span>Sobre Nosotros</span><span
                           aria-hidden="true">Sobre Nosotros</span></span></span></a></li>
@@ -55,7 +55,7 @@
           </ul>
         </div>
 
-        <a href="/" class="roll-btn py-3 px-4 text-white bg-[#2596be] hidden md:flex"><span class="roll"><span
+        <a href="#contact" class="roll-btn py-3 px-4 text-white bg-[#2596be] hidden md:flex"><span class="roll"><span
               class="roll-inner"><span>Contacto</span><span aria-hidden="true">Contacto</span></span></span></a>
         <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"
           onclick="toggleMobileMenu(this)" class="nav-burger md:hidden text-white p-4">
@@ -410,8 +410,10 @@
       <!-- Form Card -->
       <div class="flex justify-center items-center">
         <div class="bg-white w-full max-w-[562px] p-8 flex flex-col gap-8 rounded-[2px]">
-          <form class="flex flex-col gap-5">
+          <form id="contact-form" class="flex flex-col gap-5">
             <div class="flex flex-col gap-5">
+
+              <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
               <div class="flex flex-col gap-1">
                 <label for="name" class="font-medium leading-[1.48] mb-0 text-black">Nombre</label>
@@ -435,9 +437,11 @@
 
             </div>
 
+            <p id="contact-form-status" class="hidden text-sm leading-[1.64]" role="status"></p>
+
             <div class="w-full">
-              <button type="submit"
-                class="roll-btn flex items-center justify-center w-full py-3 px-4 rounded-[2px] bg-[#2596be] text-white text-sm leading-[1.68] transition-colors duration-300 hover:bg-[#1b1917] cursor-pointer"><span
+              <button type="submit" id="contact-form-submit"
+                class="roll-btn flex items-center justify-center w-full py-3 px-4 rounded-[2px] bg-[#2596be] text-white text-sm leading-[1.68] transition-colors duration-300 hover:bg-[#1b1917] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"><span
                   class="roll"><span class="roll-inner"><span>Enviar mensaje</span><span
                       aria-hidden="true">Enviar mensaje</span></span></span></button>
             </div>
@@ -1091,6 +1095,46 @@ Instagram</span>
         }, { threshold: 0.2 });
         revealEls.forEach((el) => io.observe(el));
       }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('contact-form-submit');
+      const status = document.getElementById('contact-form-status');
+
+      function showStatus(message, isError) {
+        status.textContent = message;
+        status.classList.remove('hidden', 'text-red-600', 'text-green-700');
+        status.classList.add(isError ? 'text-red-600' : 'text-green-700');
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        status.classList.add('hidden');
+
+        try {
+          const res = await fetch('/mail.php', {
+            method: 'POST',
+            body: new FormData(form),
+          });
+          const data = await res.json();
+
+          if (res.ok && data.success) {
+            showStatus('¡Gracias! Te vamos a responder a la brevedad.', false);
+            form.reset();
+          } else {
+            showStatus(data.error || 'No se pudo enviar el mensaje, intentá de nuevo.', true);
+          }
+        } catch (err) {
+          showStatus('Error de conexión, intentá de nuevo en unos minutos.', true);
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
     })();
   </script>
 

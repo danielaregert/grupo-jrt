@@ -1,0 +1,15 @@
+services:
+  grupo-jrt-php:
+    build: ./backend
+    container_name: grupo-jrt-php
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./:/srv/grupo-jrt:ro
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

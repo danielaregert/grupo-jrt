@@ -1,0 +1,8 @@
+Reemplazar el bloque actual de grupojrt.com.ar en /mnt/nvme/home/danielaregert/caddy/Caddyfile por este:
+
+http://grupojrt.com.ar {
+	root * /srv/grupo-jrt
+	php_fastcgi grupo-jrt-php:9000
+	file_server
+	encode gzip
+}
